@@ -1,0 +1,40 @@
+ <!-- <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-group">
+        <label for="login">Login:</label>
+        <input required ngModel name="login" #login="ngModel" (change)="log(login)" id="login" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="!login.valid && login.touched" >Login necessário.</div>
+    </div>
+    <div class="form-group>">
+        <label for="senha">Senha:</label>
+        <input required minlength="6" ngModel name="senha" #senha="ngModel" (change)="log(senha)" id="senha" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="!senha.valid && senha.touched"> -->
+            <div *ngIf="senha.errors.minlength">A senha precisa conter no mínimo 6 caracteres.</div>
+            <div *ngIf="senha.errors.required">Senha necessária.</div>   erro no requires e no minlenght
+        <!-- </div>
+    </div>
+    <button [disabled]="!f.valid" class="btn btn-primary">Entrar</button>
+</form> -->
+<!-- <div class="userIMG">
+    <img src="https://th.bing.com/th/id/R.8e2c571ff125b3531705198a15d3103c?rik=gzhbzBpXBa%2bxMA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-big-image-png-2240.png&ehk=VeWsrun%2fvDy5QDv2Z6Xm8XnIMXyeaz2fhR3AgxlvxAc%3d&risl=&pid=ImgRaw&r=0" alt="">
+</div>  -->
+
+
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" ngModel name="email" required email
+                    #email="ngModel">
+                <span class="help-block" style="color: red;" *ngIf="!email.valid && email.touched">Insira um email da
+                    Unifesp!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="text" id="password" class="form-control" ngModel name="password" required>
+        </div>
+        <button style="margin-top: 5%;" class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+    </form>
+</div>

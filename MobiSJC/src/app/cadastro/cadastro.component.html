@@ -1,0 +1,30 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-control" ngModel name="email" required email #email="ngModel">
+                <span class="help-block" style="color: red;" *ngIf="!email.valid && email.touched">Insira um email da Unifesp!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="text" id="password2" class="form-control" ngModel name="password2" required>    
+        </div>
+        <div class="form-group">
+            <label for="password">Confirme a senha:</label>
+            <input type="text" id="password3" class="form-control" ngModel name="password3" required>    
+        </div>
+        <button style="margin-top: 5%;" class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+    </form>
+    <div class="row" *ngIf="submitted">
+        <!-- isso eh so pra verificar se atribuiu certo -->
+        <div class="col-xs-12"> 
+          <h3>Your Data</h3> 
+          <p>password: {{ user.password }}</p>
+          <p>password2: {{ user.password2 }}</p>
+          <p>password3: {{ user.password3 }}</p>
+          <p>Mail: {{ user.email }}</p>
+        </div>
+      </div>
+    </div>
