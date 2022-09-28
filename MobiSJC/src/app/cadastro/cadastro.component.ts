@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 
@@ -7,12 +7,11 @@ import { NgForm } from '@angular/forms';
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
-export class CadastroComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+export class CadastroComponent {
 
   @ViewChild('f', { static: false }) signupForm!: NgForm ;
+
+  
 
   user = {
     email: '',

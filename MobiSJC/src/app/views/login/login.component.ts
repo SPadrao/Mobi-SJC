@@ -8,10 +8,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
-
-  // log(x: any) {console.log(x); }
-  // logSenha(y: number) {console.log(y); }
-
   
   @ViewChild('f', { static: false }) signupForm!: NgForm ;
 
@@ -28,4 +24,10 @@ export class LoginComponent{
 
     this.signupForm.reset();
   }
+
+  public inputType:string = 'password'
+  public showPassword(event:any):void{
+    event.target.checked ? this.inputType = 'text' : this.inputType = 'password';
+  }
+
 }

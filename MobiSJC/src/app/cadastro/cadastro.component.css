@@ -1,5 +1,10 @@
 .container {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 3%;
     width: 30%;
+}
+
+.adjustIMG {
+    width: 50%;
+    margin-bottom: 8%;
 }

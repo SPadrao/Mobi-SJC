@@ -1,6 +1,15 @@
 .container {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 3%;
     width: 30%;
 }
 
+.adjustIMG {
+    width: 60%;
+    margin-bottom: 8%;
+}
+
+.form-check-input-message{
+    margin-left: -67%;
+    margin-top: 10px;
+}
