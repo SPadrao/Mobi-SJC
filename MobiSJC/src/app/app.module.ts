@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { HomeComponent } from './home/home.component';
+import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.component';
+import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     LoginComponent,
     CadastroComponent,
-    HomeComponent
+    HomeComponent,
+    LoginCaronasP1Component,
+    OrigemDestinoComponent
   ],
   imports: [
     BrowserModule,
