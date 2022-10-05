@@ -1,6 +1,35 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 body{
     background-color: #275452;
+    color: white;
+}
+
+i{
+    color: white;
+}
+
+b{
+    color: white;
+}
+
+.card {
+    background-color: #0c302e;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0c302e;
+    --bs-btn-border-color: #0c302e;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #003b38;
+    --bs-btn-hover-border-color: #003b38;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #003b38;
+    --bs-btn-active-border-color: #003b38;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0c302e;
+    --bs-btn-disabled-border-color: #0c302e;
 }
 
