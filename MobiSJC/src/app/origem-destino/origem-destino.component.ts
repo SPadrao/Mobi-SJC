@@ -12,4 +12,7 @@ export class OrigemDestinoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+  }
+
 }
