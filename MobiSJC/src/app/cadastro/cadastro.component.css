@@ -7,4 +7,5 @@
 .adjustIMG {
     width: 50%;
     margin-bottom: 8%;
+    filter:invert(100%);
 }
