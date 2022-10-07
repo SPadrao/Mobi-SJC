@@ -1,11 +1,25 @@
+.containerIMG{
+    width: 40%;
+    margin-top: 5%;
+    align-items: center;
+    filter: invert(80%);
+}
+
 .container {
-    text-align: center;
+    text-align: left;
     margin-top: 3%;
     width: 30%;
+    margin-left: 30%;
+}
+
+.container2{
+    text-align: left;
+    margin-top: 3%;
+    width: 30%;
+    margin-right: 90%;
 }
 
 .adjustIMG {
-    width: 50%;
+    width: 30%;
     margin-bottom: 8%;
-    filter:invert(100%);
 }
