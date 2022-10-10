@@ -2,31 +2,36 @@
     <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
 </div>
 <div class="container">
-    <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <form>
         <div class="container1">
-            <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+            <div>
                 <div class="form-group" style="color: white;">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" class="form-control" ngModel name="email" required
+                    <input type="email"  class="form-control"  name="email" [(ngModel)] = "email" required
                         pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br" email #email="ngModel">
                     <span class="help-block" style="color: red;" *ngIf="!email.valid && email.touched">Insira um email da Unifesp!</span>
                 </div>
             </div>
             <div class="form-group" style="color: white;">
                 <label for="password">Senha:</label>
-                <input type="text" id="password2" class="form-control" ngModel name="password2" required>
+                <input type="text"  class="form-control"  name="password2" [(ngModel)] = "password2" required>
             </div>
-            <div class="form-group" style="color: white;">
+            <!--<div class="form-group" style="color: white;">
                 <label for="password">Confirme a senha:</label>
                 <input type="text" id="password3" class="form-control" ngModel name="password3" required>
 
-            </div>
+            </div>-->
         </div>
         
-        <button style="margin-top: 5%;" class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+        <button type="button" style="margin-top: 5%;" class="btn btn-info" (click)="cadastro()">Cadastre-se</button>
+        <div class="row" >
+            <div class="col-md-6">
+                <a href="/register" style = "text-decoration: none;">Precisa de uma conta ? <span class="text-danger"> Cadastre-se </span></a>
+            </div>
+        </div>
     </form>
 </div>
-<div class="container2">
+<!--<div class="container2">
     <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div class="form-group" style="color: white;">
             <label for="user_name">Nome:</label>
@@ -42,4 +47,5 @@
             <span class="help-block" style="color: red;" *ngIf="telefone.valid" >telefone incorreto!</span>
         </div>
     </form>
-</div>
+</div> Pessoal estou deixando isso comentando pois o firebase só cadastra com email e senha, vou tentar
+incluir isso depois ok? ---> 

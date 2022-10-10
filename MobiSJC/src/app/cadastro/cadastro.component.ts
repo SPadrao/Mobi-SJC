@@ -1,33 +1,34 @@
-import { Component, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
-  selector: 'app-cadastro',
+  selector: 'app-register',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
-export class CadastroComponent {
+export class CadastroComponent implements OnInit {
 
-  @ViewChild('f', { static: false }) signupForm!: NgForm ;
+  email : string = '';
+  password2 : string = '';
 
-  
+  constructor(private auth : AuthService) { }
 
-  user = {
-    email: '',
-    password: '',
-    password2: '',
-    password3: ''
-  };
-  submitted = false;
-
-  onSubmit() {
-    this.submitted = true;
-    this.user.email = this.signupForm.value.userData.email;
-    if (this.user.password2 === this.user.password3){ //totalmente primitivo, nem funciona
-      this.user.password = this.signupForm.value.password2;
-    }
-    
-    this.signupForm.reset();
+  ngOnInit(): void {
   }
+
+  cadastro() {
+    if(this.email==''){
+      alert('Por favor insira seu email');
+      return;
+    }
+    if(this.password2==''){
+      alert('Por favor insira sua senha');
+      return;
+    }
+
+    this.auth.cadastro(this.email,this.password2);
+    this.email = '';
+    this.password2 = '';
+
+  } 
 }
