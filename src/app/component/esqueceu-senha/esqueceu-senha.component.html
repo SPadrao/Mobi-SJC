@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <h4 class = "text-dark text-muted">Esqueceu senha</h4>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email:</label>
+                          <input type="email" class="form-control" name="email" placeholder="name@example.com" [(ngModel)]= 'email'>
+                          <div id="emailHelp" class="form-text">Não vamos compartilhar seu email com desconhecidos.</div>
+                        </div>
+                        <button type="button" class="btn btn-info" (click)="senhaesquecida()">Enviar Link</button>
+                        <div class="row" >
+                            <div class="col-md-6">
+                                <a href="/login" style = "text-decoration: none;">Voltar para Login</a>
+                            </div>
+                            
+                        </div>
+                      </form>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col"></div>
+            
+    </div>
+</div>
+

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <h4 class = "text-dark text-muted">Login</h4>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email:</label>
+                          <input type="email" class="form-control" name="email" placeholder="name@example.com" [(ngModel)]= 'email'>
+                          <div id="emailHelp" class="form-text">Não vamos compartilhar seu email com desconhecidos.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Senha:</label>
+                          <input type="password" class="form-control" name = "senha" [(ngModel)]="senha">
+                        </div>
+                        
+                        <button type="button" class="btn btn-info" (click)="login()">Login</button>
+                        <div class="row" >
+                            <div class="col-md-6">
+                                <a href="/register" style = "text-decoration: none;">Precisa de uma conta ? <span class="text-danger"> Cadastre-se </span></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="/esqueceu-senha" class="text-dark" style = "text-decoration: none;"> Esqueceu sua senha? </a>
+                            </div>
+                        </div>
+                      </form>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col"></div>
+            
+    </div>
+</div>
