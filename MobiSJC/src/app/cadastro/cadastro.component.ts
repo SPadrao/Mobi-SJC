@@ -1,7 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
-
+import { AuthService } from 'src/services/auth.service';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -9,25 +8,15 @@ import { NgForm } from '@angular/forms';
 })
 export class CadastroComponent {
 
-  @ViewChild('f', { static: false }) signupForm!: NgForm ;
+  constructor(private authService: AuthService){}
 
-  
-
-  user = {
-    email: '',
-    password: '',
-    password2: '',
-    password3: ''
-  };
-  submitted = false;
-
-  onSubmit() {
-    this.submitted = true;
-    this.user.email = this.signupForm.value.userData.email;
-    if (this.user.password2 === this.user.password3){ //totalmente primitivo, nem funciona
-      this.user.password = this.signupForm.value.password2;
-    }
+  onSubmit(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
+    console.log(NgForm);
     
-    this.signupForm.reset();
+    this.authService.cadastro(email,password)
+    
+    form.reset();
   }
 }

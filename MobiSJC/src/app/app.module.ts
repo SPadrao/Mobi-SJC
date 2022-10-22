@@ -12,6 +12,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import { CreateRideFormComponent } from './create-ride-form/create-ride-form.com
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
