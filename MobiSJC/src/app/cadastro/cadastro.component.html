@@ -1,46 +1,48 @@
+<<<<<<< Updated upstream
 <div class="containerIMG">
     <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
 </div>
 <!-- <div class="container">
+=======
+<div class="container">
+    <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
+>>>>>>> Stashed changes
     <form (ngSubmit)="onSubmit()" #f="ngForm">
-        <div class="container1">
+        <div id="container1">
             <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
-                <div class="form-group" style="color: white;">
+                <div id="email" class="form-group" style="color: white;">
                     <label for="email">Email:</label>
                     <input type="email" id="email" class="form-control" ngModel name="email" required
                         pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br" email #email="ngModel">
                     <span class="help-block" style="color: red;" *ngIf="!email.valid && email.touched">Insira um email da Unifesp!</span>
                 </div>
             </div>
-            <div class="form-group" style="color: white;">
+            <div id="password" class="form-group" style="color: white;">
                 <label for="password">Senha:</label>
                 <input type="text" id="password2" class="form-control" ngModel name="password2" required>
             </div>
-            <div class="form-group" style="color: white;">
+            <div id="confirmation" class="form-group" style="color: white;">
                 <label for="password">Confirme a senha:</label>
                 <input type="text" id="password3" class="form-control" ngModel name="password3" required>
 
             </div>
         </div>
-        
-        <button style="margin-top: 5%;" class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
-    </form>
-</div>
-<div class="container2">
-    <form (ngSubmit)="onSubmit()" #f="ngForm">
-        <div class="form-group" style="color: white;">
-            <label for="user_name">Nome:</label>
-            <input type="text" id="user_name" class="form-control" ngModel name="user_name" required>
+        <div id="container2">
+            <div id="name" class="form-group" style="color: white;">
+                <label for="user_name">Nome:</label>
+                <input type="text" id="user_name" class="form-control" ngModel name="user_name" required>
+            </div>
+            <div id="second" class="form-group" style="color: white;">
+                <label for="user_lastname">Sobrenome:</label>
+                <input type="text" id="user_lastname" class="form-control" ngModel name="user_lastname" required>
+            </div>
+            <div id="tel" class="form-group" style="color: white;">
+                <label for="tel">Telefone:</label>
+                <input type="text" id="tel" class="form-control" ngModel name="tel" required pattern="([0-9]{2})[0-9]{9}" tel #telefone="ngModel">
+                <span class="help-block" style="color: red;" *ngIf="telefone.valid" >telefone incorreto!</span>
+            </div>
         </div>
-        <div class="form-group" style="color: white;">
-            <label for="user_lastname">Sobrenome:</label>
-            <input type="text" id="user_lastname" class="form-control" ngModel name="user_lastname" required>
-        </div>
-        <div class="form-group" style="color: white;">
-            <label for="tel">Telefone:</label>
-            <input type="text" id="tel" class="form-control" ngModel name="tel" required pattern="([0-9]{2})[0-9]{9}" tel #telefone="ngModel">
-            <span class="help-block" style="color: red;" *ngIf="telefone.valid" >telefone incorreto!</span>
-        </div>
+        <button id="button" class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
     </form>
 </div> -->
 

@@ -8,6 +8,7 @@ import { AuthService } from 'src/services/auth.service';
 })
 export class CadastroComponent {
 
+<<<<<<< Updated upstream
   constructor(private authService: AuthService){}
 
   onSubmit(form: NgForm) {
@@ -16,6 +17,24 @@ export class CadastroComponent {
     console.log(NgForm);
     
     this.authService.cadastro(email,password)
+=======
+  @ViewChild('f', { static: false }) signupForm!: NgForm ;
+
+  user = {
+    email: '',
+    password: '',
+    password2: '',
+    password3: ''
+  };
+  submitted = false;
+
+  onSubmit() {
+    this.submitted = true;
+    this.user.email = this.signupForm.value.userData.email;
+    if (this.user.password2 === this.user.password3){ //totalmente primitivo, nem funciona
+      this.user.password = this.signupForm.value.password2;
+    }
+>>>>>>> Stashed changes
     
     form.reset();
   }
