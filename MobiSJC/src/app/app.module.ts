@@ -16,6 +16,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { ProfilePublicComponent } from './profile-public/profile-public.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     HomeComponent,
     LoginCaronasP1Component,
     OrigemDestinoComponent,
-    CreateRideFormComponent
+    CreateRideFormComponent,
+    ProfilePublicComponent
   ],
   imports: [
     BrowserModule,

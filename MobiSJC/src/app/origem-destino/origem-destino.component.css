@@ -1,4 +1,10 @@
-.adjustIMG{
-    width: 30%;
-    margin-bottom: 8%;
+.container {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.form-group {
+    width: 45%;
+    align-items: center;
+    margin-left: 28%;
 }
