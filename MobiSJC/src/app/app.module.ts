@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
+import { PrivateProfileComponent } from './private-profile/private-profile.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CreateRideFormComponent } from './create-ride-form/create-ride-form.com
     HomeComponent,
     LoginCaronasP1Component,
     OrigemDestinoComponent,
-    CreateRideFormComponent
+    CreateRideFormComponent,
+    PrivateProfileComponent
   ],
   imports: [
     BrowserModule,
