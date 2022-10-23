@@ -1,0 +1,95 @@
+[debug] [2022-10-19T19:31:31.443Z] ----------------------------------------------------------------------
+[debug] [2022-10-19T19:31:31.446Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-10-19T19:31:31.447Z] CLI Version:   11.15.0
+[debug] [2022-10-19T19:31:31.447Z] Platform:      win32
+[debug] [2022-10-19T19:31:31.447Z] Node Version:  v18.8.0
+[debug] [2022-10-19T19:31:31.448Z] Time:          Wed Oct 19 2022 16:31:31 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2022-10-19T19:31:31.449Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-19T19:31:31.554Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-19T19:31:31.554Z] > authorizing via signed-in user (padrao@unifesp.br)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\spadr\OneDrive\Documentos\GitHub\Mobi-SJC\MobiSJC
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-10-19T19:33:05.502Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-10-19T19:33:06.270Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-10-19T19:33:06.271Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project mobi-sjc-angular (MOBI-SJC-Angular) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2022-10-19T19:33:09.374Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-10-19T19:33:09.374Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/mobi-sjc-angular
+[debug] [2022-10-19T19:33:10.453Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firebasedatabase.googleapis.com 200
+[debug] [2022-10-19T19:33:10.453Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firebasedatabase.googleapis.com [omitted]
+[info] +  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2022-10-19T19:33:10.455Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/mobi-sjc-angular/locations/-/instances/mobi-sjc-angular-default-rtdb [none]
+[debug] [2022-10-19T19:33:11.562Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/mobi-sjc-angular/locations/-/instances/mobi-sjc-angular-default-rtdb 200
+[debug] [2022-10-19T19:33:11.562Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/mobi-sjc-angular/locations/-/instances/mobi-sjc-angular-default-rtdb {"name":"projects/948523288761/locations/us-central1/instances/mobi-sjc-angular-default-rtdb","project":"projects/948523288761","databaseUrl":"https://mobi-sjc-angular-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"DISABLED"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[info] Skipping overwrite of Realtime Database Security Rules.
+[info] The security rules defined in C:\Users\spadr\OneDrive\Documentos\GitHub\Mobi-SJC\database.rules.json will be published when you run firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2022-10-19T19:35:15.083Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firestore.googleapis.com [none]
+[debug] [2022-10-19T19:35:15.083Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firestore.googleapis.com x-goog-quota-user=projects/mobi-sjc-angular
+[debug] [2022-10-19T19:35:16.162Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firestore.googleapis.com 200
+[debug] [2022-10-19T19:35:16.162Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mobi-sjc-angular/services/firestore.googleapis.com [omitted]
+[debug] [2022-10-19T19:35:16.162Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/mobi-sjc-angular [none]
+[debug] [2022-10-19T19:35:16.448Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/mobi-sjc-angular 200
+[debug] [2022-10-19T19:35:16.448Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/mobi-sjc-angular {"name":"apps/mobi-sjc-angular","id":"mobi-sjc-angular","authDomain":"gmail.com","locationId":"southamerica-east1","codeBucket":"staging.mobi-sjc-angular.appspot.com","servingStatus":"SERVING","defaultHostname":"mobi-sjc-angular.rj.r.appspot.com","defaultBucket":"mobi-sjc-angular.appspot.com","serviceAccount":"mobi-sjc-angular@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-10-19T19:35:16.448Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-10-19T19:35:16.449Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-19T19:35:16.450Z] > authorizing via signed-in user (padrao@unifesp.br)
+[debug] [2022-10-19T19:35:16.450Z] [iam] checking project mobi-sjc-angular for permissions ["firebase.projects.get"]
+[debug] [2022-10-19T19:35:16.450Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mobi-sjc-angular:testIamPermissions [none]
+[debug] [2022-10-19T19:35:16.450Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mobi-sjc-angular:testIamPermissions x-goog-quota-user=projects/mobi-sjc-angular
+[debug] [2022-10-19T19:35:16.451Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mobi-sjc-angular:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-19T19:35:17.357Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mobi-sjc-angular:testIamPermissions 200
+[debug] [2022-10-19T19:35:17.357Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mobi-sjc-angular:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-10-19T19:36:24.101Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/mobi-sjc-angular/releases pageSize=10&pageToken=
+[debug] [2022-10-19T19:36:25.073Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/mobi-sjc-angular/releases 200
+[debug] [2022-10-19T19:36:25.073Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/mobi-sjc-angular/releases {"releases":[{"name":"projects/mobi-sjc-angular/releases/cloud.firestore","rulesetName":"projects/mobi-sjc-angular/rulesets/742d50ee-e05c-49fb-acd8-9673639c5478","createTime":"2022-10-09T21:32:34.330201Z","updateTime":"2022-10-09T21:32:34.330201Z"}]}
+[debug] [2022-10-19T19:36:25.074Z] Found ruleset: projects/mobi-sjc-angular/rulesets/742d50ee-e05c-49fb-acd8-9673639c5478
+[debug] [2022-10-19T19:36:25.074Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/mobi-sjc-angular/rulesets/742d50ee-e05c-49fb-acd8-9673639c5478 [none]
+[debug] [2022-10-19T19:36:26.161Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/mobi-sjc-angular/rulesets/742d50ee-e05c-49fb-acd8-9673639c5478 200
+[debug] [2022-10-19T19:36:26.161Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/mobi-sjc-angular/rulesets/742d50ee-e05c-49fb-acd8-9673639c5478 [omitted]
+[debug] [2022-10-19T19:36:26.164Z] Error: Path contains invalid characters: C:\Users\spadr\OneDrive\Documentos\GitHub\Mobi-SJC\MobiSJC\C:\Users\spadr\OneDrive\Documentos\GitHub\Mobi-SJC
+    at checkPath (C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\utils.js:16:21)
+    at module.exports.makeDirSync (C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\make-dir.js:21:3)
+    at Object.createFileSync (C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:59:45)
+    at Config.writeProjectFile (C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:152:12)
+    at C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\rules.js:50:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async doSetup (C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\firestore\index.js:35:5)
+    at async init (C:\Users\spadr\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: An unexpected error has occurred.
