@@ -8,18 +8,17 @@ import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.com
 import { LoginComponent } from './views/login/login.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
+<<<<<<< Updated upstream
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
-import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 
 const routes: Routes=[
   {path: '', component: HomeComponent},
   {path: 'login', component:LoginComponent},
   {path: 'cadastrar', component:CadastroComponent},
   {path: 'registrarCarona', component: CreateRideFormComponent},
+<<<<<<< Updated upstream
   {path: 'origemDestino', component: OrigemDestinoComponent},
-  {path: 'perfilPublico', component: ProfilePublicComponent},
-  {path: 'verificar-email', component : VerificarEmailComponent},
-  {path: 'login-caronas-p1', component : LoginCaronasP1Component}
+  {path: 'perfilPublico', component: ProfilePublicComponent}
 ];
 
 @NgModule({
