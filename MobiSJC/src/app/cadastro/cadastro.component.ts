@@ -8,16 +8,16 @@ import { AuthService } from 'src/services/auth.service';
 })
 export class CadastroComponent {
 
-<<<<<<< Updated upstream
   constructor(private authService: AuthService){}
 
   onSubmit(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
     console.log(NgForm);
-    
+
     this.authService.cadastro(email,password)
-=======
+
+  /* Conflito
   @ViewChild('f', { static: false }) signupForm!: NgForm ;
 
   user = {
@@ -33,9 +33,8 @@ export class CadastroComponent {
     this.user.email = this.signupForm.value.userData.email;
     if (this.user.password2 === this.user.password3){ //totalmente primitivo, nem funciona
       this.user.password = this.signupForm.value.password2;
-    }
->>>>>>> Stashed changes
-    
+    }*/
+
     form.reset();
   }
 }

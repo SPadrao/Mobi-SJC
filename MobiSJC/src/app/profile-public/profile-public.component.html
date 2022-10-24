@@ -1,71 +1,77 @@
 <body>
-    <div class="big_container">
-        <div class="container1">
-            <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
-            <div class="form-group" id="prim_div" style="color: white;">
-                <label for="nome" id="nome_pessoa">Nome:</label>
-                <input type="text" id="name_box" class="form-control">
-            </div>
-            <div class="form-group" id="seg_div" style="color: white;">
-                <label for="bio" id="bio_pessoa">Bio:</label>
-                <textarea rows="10" cols="70" class="form-control"></textarea>
-            </div>
-        </div>
-        <div class="container2">
-            <h1 class="titulo">Horários</h1>
-            <table class="horarios" border="3">
-                <tr>  <!-- para criar linhas -->
-                    <td width="150" >  <!-- para inserir dados -->
-                        <label style="margin: 20%;">Dia / Hora</label>
-                    </td>
-                    <td height="50" width="70" align="center"> 
-                        <label>8h-10h</label>
-                    </td>
-                    <td height="50" width="80" align="center"> 
-                        <label>10h-12h</label>
-                    </td>
-                    <td height="50" width="120" align="center"> 
-                        <label>13h30-15h30</label>
-                    </td>
-                    <td height="50" width="120" align="center"> 
-                        <label>15h30-17h30</label>
-                    </td>
-                    <td height="50" width="80" align="center"> 
-                        <label>19h-21h</label>
-                    </td>
-                    <td height="50" width="80" align="center"> 
-                        <label>21h-23h</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="80" align="center">
-                        <label style="margin: 20%;">Segunda</label>
-                    </td>
-                    <td align="center" height="80">0000</td>
-                    <td align="center" height="80">0000</td>
-                </tr>
-                <tr>
-                    <td height="80" align="center">
-                        <label style="margin: 20%;">Terça</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="80" align="center">
-                        <label style="margin: 20%;">Quarta</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="80" align="center">
-                        <label style="margin: 20%;">Quinta</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td height="80" align="center">
-                        <label style="margin: 20%;">Sexta</label>
-                    </td>
-                </tr>
-            </table>
-        </div>
+  <div class="big_container">
+    <div class="container1">
+      <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
+      <div class="form-group" id="prim_div" style="color: white;">
+        <label for="nickname" id="nickname">Apelido:</label>
+        <input type="text" id="name_box" class="form-control">
+      </div>
+      <div class="form-group" id="seg_div" style="color: white;">
+        <label for="bio" id="bio_pessoa">Bio:</label>
+        <textarea rows="10" cols="70" class="form-control"></textarea>
+      </div>
     </div>
-    
+    <div class="container2">
+      <h1 class="titulo">Horários</h1>
+      <table class="horarios" border="3">
+        <tr>
+          <!-- para criar linhas -->
+          <td width="150">
+            <!-- para inserir dados -->
+            <label style="margin: 20%;">Dia / Hora</label>
+          </td>
+          <td height="50" width="70" align="center">
+            <label>8h-10h</label>
+          </td>
+          <td height="50" width="80" align="center">
+            <label>10h-12h</label>
+          </td>
+          <td height="50" width="120" align="center">
+            <label>13h30-15h30</label>
+          </td>
+          <td height="50" width="120" align="center">
+            <label>15h30-17h30</label>
+          </td>
+          <td height="50" width="80" align="center">
+            <label>19h-21h</label>
+          </td>
+          <td height="50" width="80" align="center">
+            <label>21h-23h</label>
+          </td>
+        </tr>
+        <tr>
+          <td height="80" align="center">
+            <label style="margin: 20%;">Segunda</label>
+          </td>
+          <td align="center" height="80">0000</td>
+          <td align="center" height="80">0000</td>
+        </tr>
+        <tr>
+          <td height="80" align="center">
+            <label style="margin: 20%;">Terça</label>
+          </td>
+        </tr>
+        <tr>
+          <td height="80" align="center">
+            <label style="margin: 20%;">Quarta</label>
+          </td>
+        </tr>
+        <tr>
+          <td height="80" align="center">
+            <label style="margin: 20%;">Quinta</label>
+          </td>
+        </tr>
+        <tr>
+          <td height="80" align="center">
+            <label style="margin: 20%;">Sexta</label>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="container3" align="center">
+    <button type="button" class="btn btn-success" routerLink="/PrivateProfile">Anterior</button>
+    <button type="button" class="btn btn-success" routerLink="/PrivateProfile">Finalizar</button>
+  </div>
+
 </body>

@@ -10,10 +10,14 @@ export class PrivateProfileComponent implements OnInit {
 
   constructor(public formBuilder: FormBuilder) { }
   public formGroup!: FormGroup;
+  public picture!: File;
   public name: string = '';
   public surname: string = '';
   public birthday!: Date;
   public email: string = '';
+  public region: string = '';
+  public car: string = '';
+  public carPlate: string = '';
   public showSucss: boolean = false;
 
   ngOnInit(): void {
@@ -23,10 +27,14 @@ export class PrivateProfileComponent implements OnInit {
   updatePrivateProfile(): FormGroup {
     // As chaves precisam ser conforme o esperado pelo banco!
     return this.formBuilder.group({
+      picture: [this.picture],
       name: [this.name],
       surname: [this.surname],
       birthday: [this.birthday],
       email: [this.email],
+      region: [this.region],
+      car: [this.car],
+      carPlate: [this.carPlate],
     });
   }
 
