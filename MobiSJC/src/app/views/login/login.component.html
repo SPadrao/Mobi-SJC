@@ -14,7 +14,7 @@
             <div class="form-group" style="color: white;">
                 <label for="password">Senha:</label>
                 <form>    
-                    <input [type]="inputType" class="form-control" placehold="Password"  name="senha" [(ngModel)]="senha">  
+                    <input type="password" class="form-control" placehold="Password"  name="senha" [(ngModel)]="senha">  
                     <input (change)="showPassword($event)" type="checkbox" class="form-check-input-message">Mostrar senha
                 </form>
             </div>

@@ -10,6 +10,7 @@ import { CreateRideFormComponent } from './create-ride-form/create-ride-form.com
 import { PrivateProfileComponent } from './private-profile/private-profile.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
+import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 
 const routes: Routes=[
   {path: '', component: HomeComponent},
@@ -20,7 +21,8 @@ const routes: Routes=[
   {path: 'perfilPublico', component: ProfilePublicComponent},
   {path: 'carona', component: CaronaComponent},
   {path: 'perfilPrivado', component: PrivateProfileComponent},
-  {path: 'loginP1', component: LoginCaronasP1Component}
+  {path: 'loginP1', component: LoginCaronasP1Component},
+  {path : 'verificar-email', component: VerificarEmailComponent}
 ];
 
 @NgModule({
