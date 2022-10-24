@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CrudService } from '../shared/crud.service';
 
 @Component({
   selector: 'app-private-profile',
@@ -8,17 +9,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PrivateProfileComponent implements OnInit {
 
-  constructor(public formBuilder: FormBuilder) { }
+  constructor(public formBuilder: FormBuilder, private service: CrudService) { }
   public formGroup!: FormGroup;
   public picture!: File;
   public name: string = '';
   public surname: string = '';
-  public birthday!: Date;
+  public phone!: string;
   public email: string = '';
-  public region: string = '';
   public car: string = '';
   public carPlate: string = '';
   public showSucss: boolean = false;
+  public id: string = '';
 
   ngOnInit(): void {
     this.formGroup = this.updatePrivateProfile();
@@ -30,11 +31,11 @@ export class PrivateProfileComponent implements OnInit {
       picture: [this.picture],
       name: [this.name],
       surname: [this.surname],
-      birthday: [this.birthday],
+      phone: [this.phone],
       email: [this.email],
-      region: [this.region],
       car: [this.car],
       carPlate: [this.carPlate],
+      id: [this.id]
     });
   }
 
@@ -50,6 +51,7 @@ export class PrivateProfileComponent implements OnInit {
             setTimeout(() =>{this.showSucss = false;}, 4000);
             this.formGroup.reset();
           });*/
+          this.service.create(this.formGroup.value);
           this.formGroup.reset();
     }
   }

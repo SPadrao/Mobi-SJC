@@ -17,8 +17,10 @@ const routes: Routes=[
   {path: 'cadastrar', component:CadastroComponent},
   {path: 'registrarCarona', component: CreateRideFormComponent},
   {path: 'origemDestino', component: OrigemDestinoComponent},
-  {path: 'perfilPublico', component: ProfilePublicComponent}
-  {path: 'origemDestino', component: OrigemDestinoComponent}
+  {path: 'perfilPublico', component: ProfilePublicComponent},
+  {path: 'origemDestino', component: OrigemDestinoComponent},
+  {path: 'perfilPrivado', component: PrivateProfileComponent},
+  {path: 'loginP1', component: LoginCaronasP1Component}
 ];
 
 @NgModule({

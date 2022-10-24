@@ -23,6 +23,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { AuthService } from './shared/auth.service';
+import { PrivateProfileComponent } from './private-profile/private-profile.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AuthService } from './shared/auth.service';
     OrigemDestinoComponent,
     CreateRideFormComponent,
     ProfilePublicComponent,
-    VerificarEmailComponent
+    VerificarEmailComponent,
+    PrivateProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ import { AuthService } from './shared/auth.service';
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
   ],
   providers: [
     AuthService

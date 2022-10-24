@@ -16,3 +16,7 @@
 	outline: inherit;
 }
 
+.adjustIMG {
+    width: 6%;
+    filter:invert(100%);
+}
