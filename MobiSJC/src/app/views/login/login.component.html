@@ -1,24 +1,24 @@
 <body>
     <div class="container">
         <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
-        <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <form>
             <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
                 <div class="form-group" style="color: white;">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" class="form-control" ngModel name="email" required
-                        pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br" email #email="ngModel">
-                    <span class="help-block" style="color: red;" *ngIf="!email.valid && email.touched">Insira um email
+                    <input type="email" id="email" class="form-control"  name="email" [(ngModel)]="email" required
+                        pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br" >
+                    <span class="help-block" style="color: red;">Insira um email
                         da Unifesp!</span>
                 </div>
             </div>
             <div class="form-group" style="color: white;">
                 <label for="password">Senha:</label>
                 <form>    
-                    <input [type]="inputType" class="form-control" placehold="Password">  
+                    <input [type]="inputType" class="form-control" placehold="Password"  name="senha" [(ngModel)]="senha">  
                     <input (change)="showPassword($event)" type="checkbox" class="form-check-input-message">Mostrar senha
                 </form>
             </div>
-            <button style="margin-top: 5%;" class="btn btn-success" type="submit" [disabled]="!f.valid" routerLink="/caronasP1">Submit</button>
+            <button style="margin-top: 5%;" class="btn btn-success" type="submit" (click) = "login()">Submit</button>
         </form>
     </div>
 </body>

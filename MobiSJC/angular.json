@@ -95,6 +95,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "MobiSJC:build:production",
+            "firebaseProject": "mobi-sjc-angular",
+            "firebaseHostingSite": "mobi-sjc-angular"
+          }
         }
       }
     }

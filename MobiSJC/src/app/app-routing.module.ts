@@ -9,6 +9,7 @@ import { LoginComponent } from './views/login/login.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
+import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 
 const routes: Routes=[
   {path: '', component: HomeComponent},
@@ -16,7 +17,9 @@ const routes: Routes=[
   {path: 'cadastrar', component:CadastroComponent},
   {path: 'registrarCarona', component: CreateRideFormComponent},
   {path: 'origemDestino', component: OrigemDestinoComponent},
-  {path: 'perfilPublico', component: ProfilePublicComponent}
+  {path: 'perfilPublico', component: ProfilePublicComponent},
+  {path: 'verificar-email', component : VerificarEmailComponent},
+  {path: 'login-caronas-p1', component : LoginCaronasP1Component}
 ];
 
 @NgModule({

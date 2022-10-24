@@ -46,7 +46,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+      <form>
         <div class="form-group">
           <label for="email">E-Mail</label>
           <input
@@ -55,6 +55,7 @@
             class="form-control"
             ngModel
             name="email"
+            [(ngModel)] = "email"
             required
             email
             pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br"
@@ -67,7 +68,8 @@
             id="password"
             class="form-control"
             ngModel
-            name="password"
+            name="senha"
+            [(ngModel)] = "senha"
             required
             minlength="6"
           />
@@ -76,7 +78,8 @@
           <button
             class="btn btn-primary"
             type="submit"
-            [disabled]="!authForm.valid"
+            (click) = "cadastro()"
+            
           >Cadastrar
           </button>
         </div>
