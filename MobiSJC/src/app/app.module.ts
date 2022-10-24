@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
+import { AuthService } from './shared/auth.service';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,9 @@ import { VerificarEmailComponent } from './verificar-email/verificar-email.compo
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -48,13 +48,14 @@ export class AuthService {
   }
 
   //email para verificação 
-
   sendEmailForVarification(user : any) {
-    console.log(user);
-    user.sendEmailVerification().then((res : any) => {
-      this.router.navigate(['/verificar-email']);
-    }, (err : any) => {
-      alert('Something went wrong. Not able to send mail to your email.')
-    })
+
+    this.fireauth.currentUser.then(u => u?.sendEmailVerification())
+      .then(() =>{
+        this.router.navigate(['/verificar-email']);
+      }, (err: any) =>{
+          alert('Something Went Wrong. Not able to send mail to registered Email.');
+      })
+
   }
 }

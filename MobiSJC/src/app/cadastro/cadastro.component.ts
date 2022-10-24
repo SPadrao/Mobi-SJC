@@ -8,15 +8,34 @@ import { AuthService } from 'src/app/shared/auth.service';
 })
 export class CadastroComponent implements OnInit{
 
-  constructor(private authService: AuthService){}
+  email : string = '';
+  senha : string = '';
 
-  onSubmit(form: NgForm) {
-    const email = form.value.email;
-    const password = form.value.password;
-    console.log(NgForm);
+  constructor(private auth : AuthService) { }
+
+  ngOnInit(): void {
     
-    this.authService.cadastro(email,password)
-    
-    form.reset();
   }
+
+  cadastro(){
+    if(this.email == '') {
+      alert('Por favor entre com seu email');
+      return; 
+    }
+    if(this.senha == ''){
+      alert('Por favor entre com sua senha');
+      return;
+    }
+
+    this.auth.cadastro(this.email, this.senha);
+
+    this.email = '';
+    this.senha = '';
+  }
+
+
+
+
+  
+  
 }
