@@ -25,4 +25,5 @@ export class CrudService {
         this.angularFirestore.collection('usuarios').doc(id).delete()
     }
 
+
 }

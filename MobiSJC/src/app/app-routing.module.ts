@@ -18,7 +18,7 @@ const routes: Routes=[
   {path: 'registrarCarona', component: CreateRideFormComponent},
   {path: 'origemDestino', component: OrigemDestinoComponent},
   {path: 'perfilPublico', component: ProfilePublicComponent},
-  {path: 'origemDestino', component: OrigemDestinoComponent},
+  {path: 'carona', component: CaronaComponent},
   {path: 'perfilPrivado', component: PrivateProfileComponent},
   {path: 'loginP1', component: LoginCaronasP1Component}
 ];

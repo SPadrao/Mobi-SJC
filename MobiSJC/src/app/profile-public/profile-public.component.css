@@ -21,7 +21,7 @@
 .adjustIMG{
     width: 30%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     align-self: center;
     filter:invert(82%);
 }
@@ -36,4 +36,9 @@
 
 .titulo{
     text-align: center;
+}
+
+#botao_voltar{
+    margin-right: 1%;
+    margin-top: 1%;
 }
