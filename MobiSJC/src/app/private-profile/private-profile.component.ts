@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { CrudService } from '../shared/crud.service';
+import { UserService } from '../shared/user.service';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-private-profile',
@@ -9,9 +10,9 @@ import { CrudService } from '../shared/crud.service';
 })
 export class PrivateProfileComponent implements OnInit {
 
-  constructor(public formBuilder: FormBuilder, private service: CrudService) { }
+  constructor(public formBuilder: FormBuilder, private auth: AuthService, private service: UserService) { }
   public formGroup!: FormGroup;
-  public picture!: File;
+  public photoURL!: File;
   public name: string = '';
   public surname: string = '';
   public phone!: string;
@@ -19,7 +20,7 @@ export class PrivateProfileComponent implements OnInit {
   public car: string = '';
   public carPlate: string = '';
   public showSucss: boolean = false;
-  public id: string = '';
+  public uid: string = this.auth.userData.uid;
 
   ngOnInit(): void {
     this.formGroup = this.updatePrivateProfile();
@@ -28,31 +29,31 @@ export class PrivateProfileComponent implements OnInit {
   updatePrivateProfile(): FormGroup {
     // As chaves precisam ser conforme o esperado pelo banco!
     return this.formBuilder.group({
-      picture: [this.picture],
+      picture: [this.photoURL],
       name: [this.name],
       surname: [this.surname],
       phone: [this.phone],
       email: [this.email],
       car: [this.car],
       carPlate: [this.carPlate],
-      id: [this.id]
+      uid: [this.uid]
     });
   }
 
   ngSubmit() {
     if (this.formGroup.valid) {
       //Forma como iremos chamar nossas apis para enviar pro banco o form!
-        /*this.appService.insertUser(this.formGroup.value).subscribe(response => {
-          },
-          error => {
-          },
-          () => {
-            this.showSucss = true;
-            setTimeout(() =>{this.showSucss = false;}, 4000);
-            this.formGroup.reset();
-          });*/
-          this.service.create(this.formGroup.value);
+      /*this.appService.insertUser(this.formGroup.value).subscribe(response => {
+        },
+        error => {
+        },
+        () => {
+          this.showSucss = true;
+          setTimeout(() =>{this.showSucss = false;}, 4000);
           this.formGroup.reset();
+        });*/
+      this.service.merge(this.formGroup.value);
+      this.formGroup.reset();
     }
   }
 }
