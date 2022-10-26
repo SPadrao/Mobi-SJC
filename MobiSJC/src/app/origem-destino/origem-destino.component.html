@@ -1,24 +1,24 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit()" [formGroup]="formPlaces" #formDir="ngForm">
-        <div class="form-group" style="color: white; margin-bottom: 2%;">
-            <label for="current_local">Onde você está?</label>
-            <input type="text" id="current_local" class="form-control" formControlName="current_local" ngModel name="current_local" required>
-            <span class="help-block" style="color: red;" *ngIf="current_local.invalid && current_local.touched" class="validation_error">O local atual é necessário.</span>
-        </div>
-        <div class="form-group" style="color: white; margin-bottom: 2%;">
-            <label for="destination_user">Para onde você está indo?</label> 
-            <input type="text" id="destination" class="form-control" formControlName="destination" ngModel name="destination" required>
-            <span class="help-block" style="color: red;" *ngIf="destination.invalid && destination.touched" class="validation_error2">O local de destino é necessário.</span>
-        </div>
-        <div class="form-group" style="color: white; margin-bottom: 2%;">
-            <label for="time">Que horas você vai?</label>
-            <input type="text" id="time" class="form-control" formControlName="time" ngModel name="time" required>
-            <span class="help-block" style="color: red;" *ngIf="time.invalid && time.touched" class="validation_error3">O horário de partida é necessário.</span>
-        </div>
-        <button style="margin-top: 2%;" class="btn btn-success" type="submit" [disabled]="!formDir.valid">Submit</button>
-<<<<<<< Updated upstream
-        <!-- falta botão clicável -->
-=======
->>>>>>> Stashed changes
-    </form>
+  <form (ngSubmit)="onSubmit()" [formGroup]="formPlaces" #formDir="ngForm">
+    <div class="form-group" style="color: white; margin-bottom: 2%;">
+      <label for="current_local">Onde você está?</label>
+      <input type="text" id="current_local" class="form-control" formControlName="current_local" ngModel name="current_local" required>
+      <span class="help-block" style="color: red;" *ngIf="current_local.invalid && current_local.touched" class="validation_error">O local atual é necessário.</span>
+    </div>
+    <div class="form-group" style="color: white; margin-bottom: 2%;">
+      <label for="destination_user">Para onde você está indo?</label>
+      <input type="text" id="destination" class="form-control" formControlName="destination" ngModel name="destination" required>
+      <span class="help-block" style="color: red;" *ngIf="destination.invalid && destination.touched" class="validation_error2">O local de destino é necessário.</span>
+    </div>
+    <div class="form-group" style="color: white; margin-bottom: 2%;">
+      <label for="time">Que horas você vai?</label>
+      <input type="text" id="time" class="form-control" formControlName="time" ngModel name="time" required>
+      <span class="help-block" style="color: red;" *ngIf="time.invalid && time.touched" class="validation_error3">O horário de partida é necessário.</span>
+    </div>
+    <button style="margin-top: 2%;" class="btn btn-success" type="submit" [disabled]="!formDir.valid">Salvar</button>
+
+    <button style="margin-top: 2%;" class="btn btn-success" routerLink="/CreateRideFormComponent" type="button">Oferecer carona</button>
+
+    <button style="margin-top: 2%;" class="btn btn-success" routerLink="/CaronaComponent" type="button">Buscar carona</button>
+  </form>
 </div>

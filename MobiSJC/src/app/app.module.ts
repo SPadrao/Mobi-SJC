@@ -18,6 +18,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProfilePublicComponent } from './profile-public/profile-public.componen
     CreateRideFormComponent,
     PrivateProfileComponent,
     ProfilePublicComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
