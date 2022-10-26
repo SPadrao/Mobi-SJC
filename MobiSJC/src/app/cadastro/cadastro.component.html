@@ -1,5 +1,6 @@
+
 <div class="containerIMG">
-  <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
+    <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
 </div>
 <!-- <div class="container">
 =======
@@ -45,22 +46,45 @@
     </form>
 </div> -->
 
-<div class="row">
-  <div class="col-xs-12 col-md-6 col-md-offset-3">
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-      <div class="form-group">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" class="form-control" ngModel name="email" required email pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br">
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6" />
-      </div>
-      <div>
-        <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">Cadastrar
-        </button>
-      </div>
-    </form>
+<div class="row" style="margin-left: 32%;">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <form>
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            ngModel
+            name="email"
+            [(ngModel)] = "email"
+            required
+            email
+            pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br"
+          >
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            ngModel
+            name="senha"
+            [(ngModel)] = "senha"
+            required
+            minlength="6"
+          />
+        </div>
+        <div>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            (click) = "cadastro()"
+          >Cadastrar
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
-<button type="button" class="btn btn-success" routerLink="/perfilPublico">Próximo</button>
+  
