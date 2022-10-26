@@ -22,7 +22,7 @@ const routes: Routes=[
   {path: 'PrivateProfile', component: PrivateProfileComponent},
   {path: 'perfilPublico', component: ProfilePublicComponent},
   {path: 'origemDestino', component: OrigemDestinoComponent},
-  {path: 'CaronaComponent', component: CaronaComponent},
+  {path: 'carona', component: CaronaComponent},
 
 ];
 
