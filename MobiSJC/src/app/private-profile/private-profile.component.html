@@ -23,18 +23,18 @@
         <input type="text" name="sector" id="surname" placeholder="Insira seu sobrenome" formControlName="surname" class="form-control" required>
       </div>
       <div style="color: white;">
-        <label for="birthday">Telefone*:</label>
-        <input type="text" name="sector" id="phone" placeholder="Insira sua data de nascimento" formControlName="phone" class="form-control" required>
+        <label for="birthday">Nascimento*:</label>
+        <input type="number" name="sector" id="birthday" placeholder="Insira sua data de nascimento" formControlName="birthday" class="form-control" required min="1">
       </div>
       <div style="color: white;">
         <label for="email">E-mail*:</label>
         <!--O email ja vem do cadastro-->
         <input type="text" name="sector" id="email" placeholder="Insira seu e-mail" formControlName="email" class="form-control" required>
       </div>
-      <!-- <div style="color: white;">
+      <div style="color: white;">
         <label for="region">Região*:</label>
         <input type="text" name="sector" id="region" placeholder="Insira sua região de residência" formControlName="region" class="form-control" required>
-      </div> -->
+      </div>
       <div style="color: white;">
         <label for="car">Carro:</label>
         <input type="text" name="sector" id="car" placeholder="Insira o modelo do carro" formControlName="car" class="form-control">
@@ -45,14 +45,14 @@
       </div>
       <div>
         <label for="updateProfile"></label>
-        <!-- <p class="tab">
-        </p> -->
-        <input type="submit" id="updateProfile" class="btn btn-success" style="margin-top: 3%;" value="Atualizar perfil">
+        <p class="tab">
+        </p>
+        <input type="submit" id="updateProfile" class="btn btn-success" value="Atualizar perfil">
       </div>
     </form>
     <div>
       <p>
-        <button type="button" class="btn btn-success" style="margin-top: 3%;" routerLink="/perfilPublico">Próximo</button>
+        <button type="button" class="btn btn-success" routerLink="/perfilPublico">Finalizar</button>
       </p>
     </div>
   </div>

@@ -12,18 +12,13 @@ import { HomeComponent } from './home/home.component';
 import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
-//import { environment } from 'src/environments/environment';
+import { PrivateProfileComponent } from './private-profile/private-profile.component';
+import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
-import { AuthService } from './shared/auth.service';
-import { PrivateProfileComponent } from './private-profile/private-profile.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -36,9 +31,9 @@ import { PrivateProfileComponent } from './private-profile/private-profile.compo
     LoginCaronasP1Component,
     OrigemDestinoComponent,
     CreateRideFormComponent,
+    PrivateProfileComponent,
     ProfilePublicComponent,
-    VerificarEmailComponent,
-    PrivateProfileComponent
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,14 +41,9 @@ import { PrivateProfileComponent } from './private-profile/private-profile.compo
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
+    AngularFireAuthModule
   ],
-  providers: [
-    AuthService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
