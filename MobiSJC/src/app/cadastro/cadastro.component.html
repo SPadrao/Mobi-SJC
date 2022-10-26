@@ -2,10 +2,8 @@
   <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
 </div>
 <!-- <div class="container">
-=======
 <div class="container">
     <img class="adjustIMG" src="https://i.ibb.co/5cS2M82/usuario.png" alt="usuario">
->>>>>>> Stashed changes
     <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div id="container1">
             <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
@@ -45,19 +43,19 @@
     </form>
 </div> -->
 
-<div class="row">
+<div class="row" style="margin-left: 32%;">
   <div class="col-xs-12 col-md-6 col-md-offset-3">
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <form>
       <div class="form-group">
         <label for="email">E-Mail</label>
-        <input type="email" id="email" class="form-control" ngModel name="email" required email pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br">
+        <input type="email" id="email" class="form-control" ngModel name="email" [(ngModel)]="email" required email pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br">
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6" />
+        <input type="password" id="password" class="form-control" ngModel name="senha" [(ngModel)]="senha" required minlength="6" />
       </div>
       <div>
-        <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">Cadastrar
+        <button class="btn btn-primary" type="submit" (click)="cadastro()">Cadastrar
         </button>
       </div>
     </form>
