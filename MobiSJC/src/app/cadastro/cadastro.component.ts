@@ -32,7 +32,7 @@ export class CadastroComponent implements OnInit{
 
     this.email = '';
     this.senha = '';
-    this.router.navigate(['/menu']);
+    this.router.navigate(['/login']);
   }
 
 
