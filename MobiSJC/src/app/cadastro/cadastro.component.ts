@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
 @Component({
   selector: 'app-cadastro',
@@ -11,7 +12,7 @@ export class CadastroComponent implements OnInit{
   email : string = '';
   senha : string = '';
 
-  constructor(private auth : AuthService) { }
+  constructor(private auth : AuthService, private router: Router) { }
 
   ngOnInit(): void {
     
@@ -31,6 +32,7 @@ export class CadastroComponent implements OnInit{
 
     this.email = '';
     this.senha = '';
+    this.router.navigate(['/menu']);
   }
 
 

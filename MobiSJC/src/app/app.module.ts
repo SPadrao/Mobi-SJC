@@ -24,6 +24,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { AuthService } from './shared/auth.service';
 import { PrivateProfileComponent } from './private-profile/private-profile.component';
+import { MenuuComponent } from './menuu/menuu.component';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { PrivateProfileComponent } from './private-profile/private-profile.compo
     CreateRideFormComponent,
     ProfilePublicComponent,
     VerificarEmailComponent,
-    PrivateProfileComponent
+    PrivateProfileComponent,
+    MenuuComponent
   ],
   imports: [
     BrowserModule,

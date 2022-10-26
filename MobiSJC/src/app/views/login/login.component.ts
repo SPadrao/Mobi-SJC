@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/auth.service';
 
 
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit{
   email : string = '';
   senha : string = '';
 
-  constructor(private auth : AuthService) { }
+  constructor(private auth : AuthService, private router: Router) { }
   
   @ViewChild('f', { static: false }) signupForm!: NgForm ;
   ngOnInit(): void {
@@ -35,6 +36,7 @@ export class LoginComponent implements OnInit{
 
     this.email = '';
     this.senha = '';
+    this.router.navigate(['/menu']);
   }
 
   public inputType:string = 'senha'

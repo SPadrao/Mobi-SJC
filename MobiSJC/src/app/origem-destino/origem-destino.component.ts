@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-origem-destino',
@@ -10,7 +11,7 @@ export class OrigemDestinoComponent implements OnInit {
 
   formPlaces!: FormGroup;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.formPlaces = new FormGroup({
@@ -33,6 +34,7 @@ export class OrigemDestinoComponent implements OnInit {
   }
 
   onSubmit(){
+    this.router.navigate(['/carona']);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-ride-form',
@@ -8,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CreateRideFormComponent implements OnInit {
 
-  constructor(public formBuilder: FormBuilder) { }
+  constructor(public formBuilder: FormBuilder, private router: Router) { }
   public formGroup!: FormGroup;
   public origin: string = '';
   public destiny: string = '';
@@ -44,8 +45,9 @@ export class CreateRideFormComponent implements OnInit {
             setTimeout(() =>{this.showSucss = false;}, 4000);
             this.formGroup.reset();
           });*/
+          console.log(this.formGroup.value);
           this.formGroup.reset();
+          // this.router.navigate(['/carona']);
     }
   }
-
 }

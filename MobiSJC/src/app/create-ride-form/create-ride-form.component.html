@@ -31,12 +31,14 @@
         <input type="number" name="sector" id="vacancy" placeholder="Digite a quantidade de vagas de passageiros" formControlName="vacancy" class="form-control" required max="4" min="1">
       </div>
       <div>
-        <label for="createTrip"></label>
-        <p class="tab">
-        </p>
-        <input type="submit" id="createTrip" class="btn btn-success" value="Criar carona">
+        <label for="createTrip"></label> 
+        <!-- <p class="tab">
+        </p> -->
+        <div>
+        <input type="submit" id="createTrip" class="btn btn-success" value="Criar carona"> &nbsp;
+        <button type="button" class="btn btn-success" routerLink="/menu">Voltar</button>
+      </div>
       </div>
     </form>
-    <button type="button" class="btn btn-success" routerLink="/origemDestino">Retornar</button>
   </div>
 </body>
