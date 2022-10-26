@@ -15,7 +15,10 @@
             <input type="text" id="time" class="form-control" formControlName="time" ngModel name="time" required>
             <span class="help-block" style="color: red;" *ngIf="time.invalid && time.touched" class="validation_error3">O horário de partida é necessário.</span>
         </div>
-        <button style="margin-top: 2%;" class="btn btn-success" type="submit" [disabled]="!formDir.valid">Submit</button>
+        <button class="btn btn-success" type="submit" [disabled]="!formDir.valid">Submit</button>
         <!-- falta botão clicável -->
     </form>
+</div>
+<div style="margin-top: 1%">
+    <button style="margin-left: 47.4%;" class="btn btn-success" routerLink="/menu">Voltar</button>
 </div>
