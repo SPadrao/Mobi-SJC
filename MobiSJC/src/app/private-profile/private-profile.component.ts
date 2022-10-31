@@ -10,7 +10,7 @@ import { AuthService } from '../shared/auth.service';
 })
 export class PrivateProfileComponent implements OnInit {
 
-  constructor(public formBuilder: FormBuilder, private auth: AuthService, private service: UserService) { }
+  constructor(public formBuilder: FormBuilder, private authService: AuthService, private userService: UserService) { }
   public formGroup!: FormGroup;
   public photoURL!: File;
   public name: string = '';
@@ -20,7 +20,7 @@ export class PrivateProfileComponent implements OnInit {
   public car: string = '';
   public carPlate: string = '';
   public showSucss: boolean = false;
-  public uid: string = this.auth.userData.uid;
+  public uid: string = this.authService.userData.uid;
 
   ngOnInit(): void {
     this.formGroup = this.updatePrivateProfile();
@@ -42,17 +42,7 @@ export class PrivateProfileComponent implements OnInit {
 
   ngSubmit() {
     if (this.formGroup.valid) {
-      //Forma como iremos chamar nossas apis para enviar pro banco o form!
-      /*this.appService.insertUser(this.formGroup.value).subscribe(response => {
-        },
-        error => {
-        },
-        () => {
-          this.showSucss = true;
-          setTimeout(() =>{this.showSucss = false;}, 4000);
-          this.formGroup.reset();
-        });*/
-      this.service.merge(this.formGroup.value);
+      this.userService.merge(this.formGroup.value);
       this.formGroup.reset();
     }
   }

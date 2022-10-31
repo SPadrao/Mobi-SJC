@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RideService } from '../shared/ride.service';
+import { AuthService } from '../shared/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,15 +10,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-ride-form.component.css']
 })
 export class CreateRideFormComponent implements OnInit {
-
-  constructor(public formBuilder: FormBuilder, private router: Router) { }
+  constructor(public formBuilder: FormBuilder, private authService: AuthService, private rideService: RideService, private router: Router) { }
+  @ViewChild('modal') content: any;
   public formGroup!: FormGroup;
   public origin: string = '';
   public destiny: string = '';
   public price: number = 0;
   public embark: string = '';
-  public vacancy: string = '';
+  public vacancy: number = 0;
   public showSucss: boolean = false;
+  public id: string = '';
+  public uid: string = this.authService.userData.uid;
 
   ngOnInit(): void {
     this.formGroup = this.createForm();
@@ -30,24 +34,17 @@ export class CreateRideFormComponent implements OnInit {
       price: [this.price],
       embark: [this.embark],
       vacancy: [this.vacancy],
+      id: [this.id],
+      uid: [this.uid]
     });
   }
 
   ngSubmit() {
     if (this.formGroup.valid) {
-      //Forma como iremos chamar nossas apis para enviar pro banco o form!
-        /*this.appService.insertUser(this.formGroup.value).subscribe(response => {
-          },
-          error => {
-          },
-          () => {
-            this.showSucss = true;
-            setTimeout(() =>{this.showSucss = false;}, 4000);
-            this.formGroup.reset();
-          });*/
-          console.log(this.formGroup.value);
-          this.formGroup.reset();
-          // this.router.navigate(['/carona']);
+      const result = this.rideService.merge(this.formGroup.value);
+
+      if (result)
+        this.router.navigate(['/login']);
     }
   }
 }

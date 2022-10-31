@@ -28,8 +28,4 @@ export class UserService {
             merge: true,
         });
     }
-
-    delete(id: string) {
-        this.angularFirestore.collection('usuarios').doc(id).delete()
-    }
 }
