@@ -44,7 +44,7 @@ export class CreateRideFormComponent implements OnInit {
       const result = this.rideService.merge(this.formGroup.value);
 
       if (result)
-        this.router.navigate(['/login']);
+        this.router.navigate(['/menu']);
     }
   }
 }
