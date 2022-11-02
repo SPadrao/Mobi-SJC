@@ -10,6 +10,8 @@ import { User } from './models/user.model';
 
 export class AuthService {
   userData: any; // Save logged in user data
+  domain: any;
+
   constructor(private fireauth: AngularFireAuth, private firestore: AngularFirestore, private router: Router) {
     /* Saving user data in localstorage when 
     logged in and setting up null when logged out */
@@ -49,7 +51,7 @@ export class AuthService {
       this.setUserData(res.user);
 
       if (res.user?.emailVerified == true) {
-        this.router.navigate(['login-caronas-p1']);
+        this.router.navigate(['/menu']);
       } else {
         this.router.navigate(['/verificar-email']);
       }
@@ -62,21 +64,25 @@ export class AuthService {
 
   //register method 
   cadastro(email: string, senha: string) {
-    this.fireauth.createUserWithEmailAndPassword(email, senha).then(res => {
-      alert('Cadastro feito com sucesso');
-      this.sendEmailForVarification(res.user);
-      this.router.navigate(['/login']);
-    }, err => {
-      alert(err.message);
-      this.router.navigate(['/cadastrar']);
-    })
+    this.domain = email.split('@')[1];
+    if (this.domain === 'unifesp.br') {
+      this.fireauth.createUserWithEmailAndPassword(email, senha).then(res => {
+        alert('Cadastro feito com sucesso');
+        this.sendEmailForVarification(res.user);
+        this.router.navigate(['/login']);
+      }, err => {
+        alert(err.message);
+        this.router.navigate(['/cadastrar']);
+      })
+    }
+    alert("Utilize um email Unifesp!");
   }
 
   // sign out
   logout() {
     this.fireauth.signOut().then(() => {
       localStorage.removeItem('token');
-      this.router.navigate(['/login']);
+      this.router.navigate(['']);
     }, err => {
       alert(err.message);
     })
@@ -91,5 +97,9 @@ export class AuthService {
         alert('Something Went Wrong. Not able to send mail to registered Email.');
       })
 
+  }
+
+  isLoggedIn() {
+    return !!localStorage.getItem('token');
   }
 }

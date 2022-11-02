@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CaronaComponent } from './carona/carona.component';
 import { HomeComponent } from './home/home.component';
-import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.component';
 import { LoginComponent } from './views/login/login.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
 import { PrivateProfileComponent } from './private-profile/private-profile.component';
@@ -12,19 +11,19 @@ import { OrigemDestinoComponent } from './origem-destino/origem-destino.componen
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { MenuuComponent } from './menuu/menuu.component';
+import { AuthGuardGuard } from './shared/auth-guard.guard';
 
 const routes: Routes=[
   {path: '', component: HomeComponent},
   {path: 'login', component:LoginComponent},
   {path: 'cadastrar', component:CadastroComponent},
-  {path: 'menu', component: MenuuComponent},
-  {path: 'registrarCarona', component: CreateRideFormComponent},
-  {path: 'origemDestino', component: OrigemDestinoComponent},
-  {path: 'perfilPublico', component: ProfilePublicComponent},
-  {path: 'carona', component: CaronaComponent},
-  {path: 'perfilPrivado', component: PrivateProfileComponent},
-  {path: 'loginP1', component: LoginCaronasP1Component},
-  {path : 'verificar-email', component: VerificarEmailComponent}
+  {path: 'menu', component: MenuuComponent, canActivate:[AuthGuardGuard]},
+  {path: 'registrarCarona', component: CreateRideFormComponent, canActivate:[AuthGuardGuard]},
+  {path: 'origemDestino', component: OrigemDestinoComponent, canActivate:[AuthGuardGuard]},
+  {path: 'perfilPublico', component: ProfilePublicComponent, canActivate:[AuthGuardGuard]},
+  {path: 'carona', component: CaronaComponent, canActivate:[AuthGuardGuard]},
+  {path: 'perfilPrivado', component: PrivateProfileComponent, canActivate:[AuthGuardGuard]},
+  {path : 'verificar-email', component: VerificarEmailComponent, canActivate:[AuthGuardGuard]}
 ];
 
 @NgModule({

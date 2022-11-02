@@ -7,8 +7,8 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" class="form-control"  name="email" [(ngModel)]="email" required
                         pattern="([a-zA-Z0-9]|\.|_\-)+@unifesp\.br" >
-                    <span class="help-block" style="color: red;">Insira um email
-                        da Unifesp!</span>
+                    <!-- <span class="help-block" style="color: red;">Insira um email
+                        da Unifesp!</span> -->
                 </div>
             </div>
             <div class="form-group" style="color: white;">
@@ -18,7 +18,7 @@
                     <input (change)="showPassword($event)" type="checkbox" class="form-check-input-message">Mostrar senha
                 </form>
             </div>
-            <button style="margin-top: 5%;" class="btn btn-success" type="submit" (click) = "login()" routerLink="/menu">Submit</button>
+            <button style="margin-top: 5%;" class="btn btn-success" type="submit" (click) = "login()">Submit</button>
         </form>
     </div>
 </body>

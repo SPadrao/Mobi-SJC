@@ -9,7 +9,6 @@ import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CaronaComponent } from './carona/carona.component';
 import { HomeComponent } from './home/home.component';
-import { LoginCaronasP1Component } from './login-caronas-p1/login-caronas-p1.component';
 import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
 //import { environment } from 'src/environments/environment';
@@ -25,6 +24,7 @@ import { VerificarEmailComponent } from './verificar-email/verificar-email.compo
 import { AuthService } from './shared/auth.service';
 import { PrivateProfileComponent } from './private-profile/private-profile.component';
 import { MenuuComponent } from './menuu/menuu.component';
+import { AuthGuardGuard } from './shared/auth-guard.guard';
 
 
 @NgModule({
@@ -35,7 +35,6 @@ import { MenuuComponent } from './menuu/menuu.component';
     CadastroComponent,
     CaronaComponent,
     HomeComponent,
-    LoginCaronasP1Component,
     OrigemDestinoComponent,
     CreateRideFormComponent,
     ProfilePublicComponent,
@@ -55,7 +54,8 @@ import { MenuuComponent } from './menuu/menuu.component';
     provideFirestore(() => getFirestore()),
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardGuard
   ],
   bootstrap: [AppComponent]
 })

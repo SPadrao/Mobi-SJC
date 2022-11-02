@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
 
     this.email = '';
     this.senha = '';
-    this.router.navigate(['/menu']);
+    //this.router.navigate(['/menu']);
   }
 
   public inputType:string = 'senha'
