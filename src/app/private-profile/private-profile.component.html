@@ -1,0 +1,59 @@
+<div class="sucess" *ngIf="showSucss">
+  <div class="col-xs-12">
+    <p class="alert alert-success">
+      <strong>Perfil salvo com sucesso!</strong>
+    </p>
+  </div>
+</div>
+
+<body>
+  <div id="view-private-profile" class="container">
+    <h1>Edição do perfil</h1>
+    <form id="private-profile-form" [formGroup]="formGroup" (ngSubmit)="ngSubmit()" ngNativeValidate>
+      <div style="color: white;">
+        <label for="picture">Foto:</label>
+        <input type="file" name="sector" id="picture" placeholder="Insira sua imagem de perfil" formControlName="picture" class="form-control">
+      </div>
+      <div style="color: white;">
+        <label for="name">Nome*:</label>
+        <input type="text" name="sector" id="name" placeholder="Insira seu nome" formControlName="name" class="form-control" required>
+      </div>
+      <div style="color: white;">
+        <label for="surname">Sobrenome*:</label>
+        <input type="text" name="sector" id="surname" placeholder="Insira seu sobrenome" formControlName="surname" class="form-control" required>
+      </div>
+      <div style="color: white;">
+        <label for="birthday">Telefone*:</label>
+        <input type="text" name="sector" id="phone" placeholder="Insira seu telefone" formControlName="phone" class="form-control" required>
+      </div>
+      <div style="color: white;">
+        <label for="email">E-mail*:</label>
+        <!--O email ja vem do cadastro-->
+        <input type="text" name="sector" id="email" placeholder="Insira seu e-mail" formControlName="email" class="form-control" required>
+      </div>
+      <!-- <div style="color: white;">
+        <label for="region">Região*:</label>
+        <input type="text" name="sector" id="region" placeholder="Insira sua região de residência" formControlName="region" class="form-control" required>
+      </div> -->
+      <div style="color: white;">
+        <label for="car">Carro:</label>
+        <input type="text" name="sector" id="car" placeholder="Insira o modelo do carro" formControlName="car" class="form-control">
+      </div>
+      <div style="color: white;">
+        <label for="carPlate">Placa do carro:</label>
+        <input type="text" name="sector" id="carPlate" placeholder="Insira a placa de seu carro" formControlName="carPlate" class="form-control">
+      </div>
+      <div>
+        <label for="updateProfile"></label>
+        <!-- <p class="tab">
+        </p> -->
+        <input type="submit" id="updateProfile" class="btn btn-success" style="margin-top: 3%;" value="Atualizar perfil">
+      </div>
+    </form>
+    <div>
+      <p>
+        <button type="button" class="btn btn-success" style="margin-top: 3%;" routerLink="/perfilPublico">Voltar</button>
+      </p>
+    </div>
+  </div>
+</body>
