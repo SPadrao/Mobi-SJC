@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mobi-sjc-angular": {
+      "hosting": {
+        "MobiSJC": [
+          "mobi-sjc-angular"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mobi-sjc-angular"
+  }
+}
