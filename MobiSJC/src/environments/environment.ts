@@ -14,7 +14,7 @@ export const environment = {
     messagingSenderId: '948523288761',
     measurementId: 'G-R7TZQ2NELS',
   },
-  production: false,
+  production: true,
   firebaseConfig: {
     apiKey: "AIzaSyBc4Fit7x9GgaCBLaF1-cpH6xnKPt76SNE",
     authDomain: "mobi-sjc-angular.firebaseapp.com",
