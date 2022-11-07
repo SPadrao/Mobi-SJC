@@ -1,5 +1,44 @@
 
-.img{
-    margin-top: 6%;
-    margin-left: 8%;
-}
+  .p{
+    color:whitesmoke;
+    margin-top: -10%;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  .container {
+    min-height: 84vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+  
+  
+
+  button {
+    margin-top: 10%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px #0c302e;
+    transition: 0.3s;
+  }
+  
+  #bt2 {
+
+  }
+  
+  #bt1 {
+   
+  }
+  
+  button:hover {
+    color: #0c302e;
+    box-shadow: 0 0 20px#0c302e(104, 85, 224, 0.6);
+    background-color: #0c302e(104, 85, 224, 1);
+  }

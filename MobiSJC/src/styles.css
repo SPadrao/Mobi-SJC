@@ -2,8 +2,13 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 body{
-    background-color: #275452;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color:#0c302e ;
     color: white;
+    background-image: linear-gradient(180deg, #0c302e, #275452);
+
 }
 
 i{
@@ -15,6 +20,7 @@ b{
 }
 
 .card {
+    
     background-color: #0c302e;
 }
 
@@ -32,4 +38,3 @@ b{
     --bs-btn-disabled-bg: #0c302e;
     --bs-btn-disabled-border-color: #0c302e;
 }
-
