@@ -37,7 +37,7 @@ export class CaronaComponent implements OnInit {
       })
 
     }, err => {
-      alert('Error while fetching student data');
+      alert('Error while fetching ride data');
     })
 
   }
