@@ -33,6 +33,14 @@ export class RideService {
     //get all rides
 
     getAllrides() {
-        return this.angularFirestore.collection('rides').snapshotChanges()
+        return this.angularFirestore.collection("rides/").snapshotChanges()
     }
+
+    searchrides(searchValue: string){
+        return this.angularFirestore.collection('rides',ref => ref.where('nameToSearch', '>=', searchValue)
+          .where('nameToSearch', '<=', searchValue + '\uf8ff'))
+          .snapshotChanges()
+    }
+
+    
 }

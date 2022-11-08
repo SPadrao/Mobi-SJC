@@ -10,14 +10,25 @@ import { RideService } from '../shared/ride.service';
 })
 export class CaronaComponent implements OnInit {
 
-  rideList : Ride[] = []
+  rideList : Ride[] = [];
+  studentObj: Ride = {
+    uid: '',
+    id: '',
+    origin: '',
+    destiny: '',
+    price: 0,
+    embark: '',
+    vacancy: 0
+  };
   uid : string = ''; 
   id : string = '';
   origin : string = '';
   destiny: string = '';
-  price!: number;
+  price: number = 0;
   embark : string = '';
-  vacancy!: number;
+  vacancy: number = 0;
+  AuthService: any;
+  RideService: any;
   
 
   constructor(private auth: AuthService, private data : RideService) { }
@@ -25,6 +36,9 @@ export class CaronaComponent implements OnInit {
   ngOnInit(): void {
     this.getAllrides();
   }
+
+  Rides: any;
+
 
   getAllrides(){
 
@@ -37,9 +51,8 @@ export class CaronaComponent implements OnInit {
       })
 
     }, err => {
-      alert('Error while fetching ride data');
+      alert('Error while fetching student data');
     })
-
   }
 
 }
