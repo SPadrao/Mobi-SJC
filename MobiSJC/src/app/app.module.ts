@@ -25,7 +25,8 @@ import { AuthService } from './shared/auth.service';
 import { PrivateProfileComponent } from './private-profile/private-profile.component';
 import { MenuuComponent } from './menuu/menuu.component';
 import { AuthGuardGuard } from './shared/auth-guard.guard';
-
+import { ToastrModule } from 'ngx-toastr';
+import { NotifierComponent } from './notifier/notifier.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AuthGuardGuard } from './shared/auth-guard.guard';
     ProfilePublicComponent,
     VerificarEmailComponent,
     PrivateProfileComponent,
-    MenuuComponent
+    MenuuComponent,
+    NotifierComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,9 @@ import { AuthGuardGuard } from './shared/auth-guard.guard';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    ToastrModule.forRoot({
+      
+     })
   ],
   providers: [
     AuthService,

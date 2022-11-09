@@ -12,6 +12,7 @@ import { ProfilePublicComponent } from './profile-public/profile-public.componen
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { MenuuComponent } from './menuu/menuu.component';
 import { AuthGuardGuard } from './shared/auth-guard.guard';
+import { NotifierComponent } from './notifier/notifier.component';
 
 const routes: Routes=[
   {path: '', component: HomeComponent},
@@ -23,7 +24,8 @@ const routes: Routes=[
   {path: 'perfilPublico', component: ProfilePublicComponent, canActivate:[AuthGuardGuard]},
   {path: 'carona', component: CaronaComponent, canActivate:[AuthGuardGuard]},
   {path: 'perfilPrivado', component: PrivateProfileComponent, canActivate:[AuthGuardGuard]},
-  {path : 'verificar-email', component: VerificarEmailComponent, canActivate:[AuthGuardGuard]}
+  {path : 'verificar-email', component: VerificarEmailComponent, canActivate:[AuthGuardGuard]},
+  {path : 'notifier', component: NotifierComponent, canActivate:[AuthGuardGuard]}
 ];
 
 @NgModule({
