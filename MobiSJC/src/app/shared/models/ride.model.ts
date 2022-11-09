@@ -3,7 +3,7 @@ export interface Ride {
     uid: string;
     id: string;
     origin: string;
-    destiny: boolean;
+    destiny: string;
     price: number;
     embark: string;
     vacancy: number;

@@ -29,4 +29,18 @@ export class RideService {
     delete(id: string) {
         this.angularFirestore.collection('rides').doc(id).delete()
     }
+
+    //get all rides
+
+    getAllrides() {
+        return this.angularFirestore.collection("rides/").snapshotChanges()
+    }
+
+    searchrides(searchValue: string){
+        return this.angularFirestore.collection('rides',ref => ref.where('nameToSearch', '>=', searchValue)
+          .where('nameToSearch', '<=', searchValue + '\uf8ff'))
+          .snapshotChanges()
+    }
+
+    
 }
