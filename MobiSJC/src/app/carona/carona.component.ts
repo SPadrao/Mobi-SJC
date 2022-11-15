@@ -20,7 +20,7 @@ export class CaronaComponent implements OnInit {
     embark: '',
     vacancy: 0
   };
-  uid : string = ''; 
+  uid : string = '';
   id : string = '';
   origin : string = '';
   destiny: string = '';
@@ -29,7 +29,7 @@ export class CaronaComponent implements OnInit {
   vacancy: number = 0;
   AuthService: any;
   RideService: any;
-  
+
 
   constructor(private auth: AuthService, private data : RideService) { }
 
@@ -43,16 +43,23 @@ export class CaronaComponent implements OnInit {
   getAllrides(){
 
     this.data.getAllrides().subscribe(res => {
-
       this.rideList = res.map((e: any) => {
         const data = e.payload.doc.data();
         data.id = e.payload.doc.id;
         return data;
       })
 
+      let teste = this.rideList.filter((el) => {
+        return el.vacancy !== 0
+      })
+      this.rideList = teste;
     }, err => {
       alert('Error while fetching student data');
     })
+  }
+
+  isBigEnough(value: any) {
+    return value >= 3;
   }
 
 }
