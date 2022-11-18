@@ -27,7 +27,7 @@ const routes: Routes=[
   {path: 'perfilPrivado', component: PrivateProfileComponent, canActivate:[AuthGuardGuard]},
   {path : 'verificar-email', component: VerificarEmailComponent, canActivate:[AuthGuardGuard]},
   {path : 'notifier', component: NotifierComponent, canActivate:[AuthGuardGuard]},
-  {path: 'calendario-edit', component: ScheduleEditComponent}
+  {path: 'calendario-edit', component: ScheduleEditComponent, canActivate:[AuthGuardGuard]}
 ];
 
 @NgModule({

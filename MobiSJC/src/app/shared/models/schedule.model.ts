@@ -1,6 +1,5 @@
 export interface Schedule {
     uid: string;
-    id: string;
     segIda?: string;
     segVolta?: string;
     terIda?: string;

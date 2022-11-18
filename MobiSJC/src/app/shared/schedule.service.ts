@@ -15,7 +15,6 @@ export class ScheduleService {
 
         const scheduleData: Schedule = {
             uid: schedule.uid,
-            id: schedule.id,
             segIda: schedule.segIda,
             segVolta: schedule.segVolta,
             terIda: schedule.terIda,

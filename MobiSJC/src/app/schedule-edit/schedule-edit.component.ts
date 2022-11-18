@@ -12,11 +12,10 @@ import { UserService } from '../shared/user.service';
 export class ScheduleEditComponent implements OnInit {
 
   constructor(public formBuilder: FormBuilder, private authService: AuthService, 
-    private userService: UserService, private scheduleService: ScheduleService) { }
+    private scheduleService: ScheduleService) { }
 
   public formGroup!: FormGroup;
   public uid: string = this.authService.userData.uid;
-  public id: string = '';
   public segIda: string = '';
   public segVolta: string = '';
   public terIda: string = '';
@@ -27,6 +26,7 @@ export class ScheduleEditComponent implements OnInit {
   public quiVolta: string = '';
   public sexIda: string = '';
   public sexVolta: string = '';
+  public flag4null: boolean = true;
 
   ngOnInit(): void {
     this.formGroup = this.updateSchedule();
@@ -35,7 +35,6 @@ export class ScheduleEditComponent implements OnInit {
   updateSchedule(): FormGroup {
     return this.formBuilder.group({
     uid: [this.uid],
-    id: [this.id],
     segIda: [this.segIda],
     segVolta: [this.segVolta],
     terIda: [this.terIda],
@@ -54,5 +53,6 @@ export class ScheduleEditComponent implements OnInit {
       this.scheduleService.merge(this.formGroup.value);
       this.formGroup.reset();
     }
+    
   }
 }
