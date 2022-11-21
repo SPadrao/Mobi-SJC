@@ -10,10 +10,7 @@ export class ProfilePublicComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    console.log(this.authService.userData.uid);
-    console.log(this.authService.userData.name);
-    console.log(this.authService.userData.surname);
-    console.log(this.authService.userData.email);
+
   }
 
 }
