@@ -35,6 +35,7 @@ export class CaronaComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllrides();
+    
   }
 
   Rides: any;
@@ -53,6 +54,11 @@ export class CaronaComponent implements OnInit {
     }, err => {
       alert('Error while fetching student data');
     })
+  } 
+  deleteRide(ride: Ride) {
+    if (window.confirm('Tem certeza que deseja cancelar a corrida ?')) {
+      this.data.deleteRide(ride);
+    }
   }
 
 }

@@ -26,8 +26,8 @@ export class RideService {
         return true;
     }
 
-    delete(id: string) {
-        this.angularFirestore.collection('rides').doc(id).delete()
+    deleteRide(ride: Ride) {
+        this.angularFirestore.collection('rides').doc(ride.id).delete()
     }
 
     //get all rides
@@ -44,3 +44,4 @@ export class RideService {
 
     
 }
+
