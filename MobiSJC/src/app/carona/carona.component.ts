@@ -42,20 +42,21 @@ export class CaronaComponent implements OnInit {
 
   getAllrides(){
 
-    this.data.getAllrides().subscribe(res => {
+    this.data.getVacantrides().subscribe(res => {
       this.rideList = res.map((e: any) => {
         const data = e.payload.doc.data();
         data.id = e.payload.doc.id;
         return data;
       })
 
-      let teste = this.rideList.filter((el) => {
-        return el.vacancy !== 0
-      })
-      this.rideList = teste;
+      // let teste = this.rideList.filter((el) => {
+      //   return el.vacancy !== 0
+      // })
+      // this.rideList = teste;
     }, err => {
       alert('Error while fetching student data');
-    })
+    }
+    )
   }
 
   isBigEnough(value: any) {
