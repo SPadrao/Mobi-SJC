@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/SPadrao/Mobi-SJC/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/SPadrao/Mobi-SJC/actions/workflows/node.js.yml) ![Statements](https://img.shields.io/badge/statements-10.98%25-red.svg?style=flat) ![Branches](https://img.shields.io/badge/branches-0%25-red.svg?style=flat) ![Functions](https://img.shields.io/badge/functions-9.21%25-red.svg?style=flat) ![Lines](https://img.shields.io/badge/lines-11.9%25-red.svg?style=flat)
+
 # MobiSJC
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
