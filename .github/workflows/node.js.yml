@@ -22,8 +22,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd .\MobiSJC\
     - run: npm ci
+        working-directory: ./MobiSJC/
     - run: npm run build
+        working-directory: ./MobiSJC/
     - run: npm run test
+        working-directory: ./MobiSJC/
     - run: npm run make-badge
+        working-directory: ./MobiSJC/
