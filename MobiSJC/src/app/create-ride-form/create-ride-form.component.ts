@@ -19,8 +19,7 @@ export class CreateRideFormComponent implements OnInit {
   public embark: string = '';
   public vacancy: number = 0;
   public showSucss: boolean = false;
-  public id: string = '';
-  public uid: string = this.authService.userData.uid;
+  public uid: string = this.authService.userData.uid ?? '';
 
   ngOnInit(): void {
     this.formGroup = this.createForm();
@@ -34,7 +33,6 @@ export class CreateRideFormComponent implements OnInit {
       price: [this.price],
       embark: [this.embark],
       vacancy: [this.vacancy],
-      id: [this.id],
       uid: [this.uid]
     });
   }

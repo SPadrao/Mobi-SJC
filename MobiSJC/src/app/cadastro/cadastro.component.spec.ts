@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../../environments/environment';
 import { CadastroComponent } from './cadastro.component';
 
 describe('CadastroComponent', () => {
@@ -8,9 +9,12 @@ describe('CadastroComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CadastroComponent ]
+      imports: [
+        AngularFireModule.initializeApp(environment.firebase),
+      ],
+      declarations: [CadastroComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(CadastroComponent);
     component = fixture.componentInstance;
