@@ -52,6 +52,7 @@ export class ScheduleEditComponent implements OnInit {
     if (this.formGroup.valid) {
       this.scheduleService.merge(this.formGroup.value);
       this.formGroup.reset();
+      console.log(this.scheduleService);
     }
     
   }
