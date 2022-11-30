@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserService } from '../shared/user.service';
 import { AuthService } from '../shared/auth.service';
+import { Observable } from 'rxjs';
+import { User } from '../shared/models/user.model';
 
 @Component({
   selector: 'app-private-profile',
@@ -11,6 +13,8 @@ import { AuthService } from '../shared/auth.service';
 export class PrivateProfileComponent implements OnInit {
 
   constructor(public formBuilder: FormBuilder, private authService: AuthService, private userService: UserService) { }
+  userData!: Observable<{ user: User }[]>;
+
   public formGroup!: FormGroup;
   public photoURL!: File;
   public name: string = '';
@@ -20,10 +24,12 @@ export class PrivateProfileComponent implements OnInit {
   public car: string = '';
   public carPlate: string = '';
   public showSucss: boolean = false;
-  public uid: string = this.authService.userData.uid;
+  public uid: string = '';
 
   ngOnInit(): void {
     this.formGroup = this.updatePrivateProfile();
+    this.userData = this.authService.userData;
+    this.uid = this.userData.uid;
   }
 
   updatePrivateProfile(): FormGroup {
