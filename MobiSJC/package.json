@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --browsers=ChromeHeadless --progress=false --watch=false --code-coverage --source-map=false",
+    "make-badge": "istanbul-badges-readme --linesLabel='Coverage'"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +23,7 @@
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
     "firebase": "^9.12.1",
-    "ngx-toastr": "^15.2.1",
+    "ngx-toastr": "^15.2.2",
     "primeng": "^14.1.1",
     "rxfire": "^6.0.3",
     "rxjs": "~7.5.0",
@@ -35,6 +36,7 @@
     "@angular/cli": "~14.2.1",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "istanbul-badges-readme": "^1.8.2",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

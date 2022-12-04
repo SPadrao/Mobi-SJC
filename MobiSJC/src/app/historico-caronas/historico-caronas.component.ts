@@ -4,11 +4,11 @@ import { Ride } from '../shared/models/ride.model';
 import { RideService } from '../shared/ride.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './carona.component.html',
-  styleUrls: ['./carona.component.css']
+  selector: 'app-historico-caronas',
+  templateUrl: './historico-caronas.component.html',
+  styleUrls: ['./historico-caronas.component.css']
 })
-export class CaronaComponent implements OnInit {
+export class HistoricoCaronasComponent implements OnInit {
 
   rideList : Ride[] = [];
   studentObj: Ride = {
@@ -34,16 +34,16 @@ export class CaronaComponent implements OnInit {
   constructor(private auth: AuthService, private data : RideService) { }
 
   ngOnInit(): void {
-    this.getAllrides();
+    this.getPastrides();
     
   }
 
   Rides: any;
 
 
-  getAllrides(){
+  getPastrides(){
 
-    this.data.getAllrides().subscribe(res => {
+    this.data.getPastrides().subscribe(res => {
 
       this.rideList = res.map((e: any) => {
         const data = e.payload.doc.data();
@@ -55,16 +55,5 @@ export class CaronaComponent implements OnInit {
       alert('Error while fetching student data');
     })
   } 
-  deleteRide(ride: Ride) {
-    if (window.confirm('Tem certeza que deseja cancelar a corrida ?')) {
-      this.data.deleteRide(ride);
-    }
-  }
-  reserveRide(ride: Ride) {
-    if (window.confirm('Tem certeza que deseja reservar a corrida ?')) {
-      this.data.putInPastRide(ride);
-      this.data.deleteRide(ride);
-    }
-  }
 
 }
