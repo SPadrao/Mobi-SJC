@@ -28,6 +28,7 @@ import { AuthGuardGuard } from './shared/auth-guard.guard';
 import { ToastrModule } from 'ngx-toastr';
 import { NotifierComponent } from './notifier/notifier.component';
 import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
+import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
     PrivateProfileComponent,
     MenuuComponent,
     NotifierComponent,
-    ScheduleEditComponent
+    ScheduleEditComponent,
+    HistoricoCaronasComponent
   ],
   imports: [
     BrowserModule,

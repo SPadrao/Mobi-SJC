@@ -26,6 +26,23 @@ export class RideService {
         return true;
     }
 
+    putInPastRide(ride: Ride): Boolean {
+        if (ride.id === '')
+            ride.id = this.angularFirestore.createId()
+
+        this.angularFirestore.collection('past rides').doc(ride.id).set(ride, { merge: true })
+            .then(() => {
+                alert("Carona reservada com sucesso!");
+            })
+            .catch((error) => {
+                alert("Erro ao reservar carona!");
+                console.log(error);
+                return false;
+            })
+
+        return true;
+    }
+
     deleteRide(ride: Ride) {
         this.angularFirestore.collection('rides').doc(ride.id).delete()
     }
@@ -34,6 +51,10 @@ export class RideService {
 
     getAllrides() {
         return this.angularFirestore.collection("rides/").snapshotChanges()
+    }
+
+    getPastrides() {
+        return this.angularFirestore.collection("past rides/").snapshotChanges()
     }
 
     searchrides(searchValue: string){

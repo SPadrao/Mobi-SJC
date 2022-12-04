@@ -14,6 +14,7 @@ import { MenuuComponent } from './menuu/menuu.component';
 import { AuthGuardGuard } from './shared/auth-guard.guard';
 import { NotifierComponent } from './notifier/notifier.component';
 import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
+import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas.component';
 
 const routes: Routes=[
   {path: '', component: HomeComponent},
@@ -27,7 +28,8 @@ const routes: Routes=[
   {path: 'perfilPrivado', component: PrivateProfileComponent, canActivate:[AuthGuardGuard]},
   {path : 'verificar-email', component: VerificarEmailComponent, canActivate:[AuthGuardGuard]},
   {path : 'notifier', component: NotifierComponent, canActivate:[AuthGuardGuard]},
-  {path: 'calendario-edit', component: ScheduleEditComponent, canActivate:[AuthGuardGuard]}
+  {path: 'calendario-edit', component: ScheduleEditComponent, canActivate:[AuthGuardGuard]},
+  {path: 'historico-caronas', component: HistoricoCaronasComponent, canActivate:[AuthGuardGuard]}
 ];
 
 @NgModule({
