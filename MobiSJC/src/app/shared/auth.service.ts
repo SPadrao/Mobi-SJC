@@ -9,12 +9,14 @@ import { User } from './models/user.model';
 })
 
 export class AuthService {
-  userData: any; // Save logged in user data
+  userData: any = {
+    uid: 'testingUID',
+    email: 'test@test.test',
+    emailVerified: true,
+  };
   domain: any;
 
   constructor(private fireauth: AngularFireAuth, private firestore: AngularFirestore, private router: Router) {
-    /* Saving user data in localstorage when 
-    logged in and setting up null when logged out */
     this.fireauth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
@@ -28,9 +30,6 @@ export class AuthService {
     });
   }
 
-  /* Setting up user data when sign in with username/password, 
-  sign up with username/password and sign in with social auth  
-  provider in Firestore database using AngularFirestore + AngularFirestoreDocument service */
   setUserData(user: any) {
     const userRef: AngularFirestoreDocument<any> = this.firestore.doc(
       `users/${user.uid}`

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../../environments/environment';
 import { HistoricoCaronasComponent } from './historico-caronas.component';
 
 describe('HistoricoCaronasComponent', () => {
@@ -8,9 +9,12 @@ describe('HistoricoCaronasComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HistoricoCaronasComponent ]
+      imports: [
+        AngularFireModule.initializeApp(environment.firebase)
+      ],
+      declarations: [HistoricoCaronasComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HistoricoCaronasComponent);
     component = fixture.componentInstance;
