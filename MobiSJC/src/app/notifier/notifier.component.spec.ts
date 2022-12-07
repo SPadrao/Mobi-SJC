@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ToastrModule } from 'ngx-toastr'
 import { NotifierComponent } from './notifier.component';
 
 describe('NotifierComponent', () => {
@@ -8,9 +8,12 @@ describe('NotifierComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NotifierComponent ]
+      imports: [
+        ToastrModule.forRoot({})
+      ],
+      declarations: [NotifierComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(NotifierComponent);
     component = fixture.componentInstance;

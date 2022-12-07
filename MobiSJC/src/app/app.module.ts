@@ -9,17 +9,15 @@ import { LoginComponent } from './views/login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CaronaComponent } from './carona/carona.component';
 import { HomeComponent } from './home/home.component';
-import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
+// import { OrigemDestinoComponent } from './origem-destino/origem-destino.component';
 import { CreateRideFormComponent } from './create-ride-form/create-ride-form.component';
 //import { environment } from 'src/environments/environment';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ProfilePublicComponent } from './profile-public/profile-public.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { VerificarEmailComponent } from './verificar-email/verificar-email.component';
 import { AuthService } from './shared/auth.service';
 import { PrivateProfileComponent } from './private-profile/private-profile.component';
@@ -38,7 +36,7 @@ import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas
     CadastroComponent,
     CaronaComponent,
     HomeComponent,
-    OrigemDestinoComponent,
+    // OrigemDestinoComponent,
     CreateRideFormComponent,
     ProfilePublicComponent,
     VerificarEmailComponent,
@@ -55,12 +53,10 @@ import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
+    AngularFirestoreModule,
     ToastrModule.forRoot({
-      
-     })
+
+    })
   ],
   providers: [
     AuthService,
