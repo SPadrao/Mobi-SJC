@@ -1,47 +1,48 @@
 <div class="col-md-8 mt-2">
   <h5 class="text-danger">Ride List</h5>
   <div class="card p-3 shadow">
-      <div class="card-body">
-          <table class="table table-hover table-dark">
-              <thead>
-                <tr>
-                  <th scope="col">uid</th>
-                  <th scope="col">id</th>
-                  <th scope="col">Origin</th>
-                  <th scope="col">Destiny</th>
-                  <th scope="col">Price</th>
-                  <th scope="col">Embark</th>
-                  <th scope="col">Vacancy</th>
+    <div class="card-body">
+      <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">uid</th>
+            <th scope="col">id</th>
+            <th scope="col">Origin</th>
+            <th scope="col">Destiny</th>
+            <th scope="col">Price</th>
+            <th scope="col">Embark</th>
+            <th scope="col">Vacancy</th>
 
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let ridenet of rideList">
-                  <td >{{ridenet.uid}}</td>
-                  <td>{{ridenet.id}}</td>
-                  <td>{{ridenet.origin}}</td>
-                  <td>{{ridenet.destiny}}</td>
-                  <td>{{ridenet.price}}</td>
-                  <td>{{ridenet.embark}}</td>
-                  <td>{{ridenet.vacancy}}</td>
-                
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ridenet of rideList">
+            <td>{{ridenet.uid}}</td>
+            <td>{{ridenet.id}}</td>
+            <td>{{ridenet.origin}}</td>
+            <td>{{ridenet.destiny}}</td>
+            <td>{{ridenet.price}}</td>
+            <td>{{ridenet.embark}}</td>
+            <td>{{ridenet.vacancy}}</td>
 
-                  <td>
-                    
-                    <a class="btn btn-outline-danger ms-2" type="button" (click)="deleteRide(ridenet)">Delete</a>
-                  
+            <td>
 
-                  </td>
+              <a class="btn btn-outline-danger ms-2" type="button" (click)="deleteRide(ridenet)">Delete</a>
 
-                  <td>
-                    
-                    <a class="btn btn-outline-success ms-2" type="button" (click)="reserveRide(ridenet)">Reservar</a>
-                  
 
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-      </div>
+            </td>
+
+            <td>
+
+              <a class="btn btn-outline-success ms-2" type="button" (click)="reserveRide(ridenet)">Reservar</a>
+
+
+            <td>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
