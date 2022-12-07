@@ -1,0 +1,39 @@
+<body>
+    <div id="schedule-form" class="container">
+      <h1>Horários</h1>
+      <form id="schedule-form" [formGroup]="formGroup" (ngSubmit)="ngSubmit()" ngNativeValidate>
+          <div style="color: white;">
+            <label for="name">Segunda:</label>
+            <input type="text" name="sector" id="segIda" formControlName="segIda" class="form-control">
+            <input type="text" name="sector" id="segVolta" formControlName="segVolta" class="form-control">
+          </div>
+          <div style="color: white;">
+            <label for="name">Terça:</label>
+            <input type="text" name="sector" id="terIda" formControlName="terIda" class="form-control">
+            <input type="text" name="sector" id="terVolta" formControlName="terVolta" class="form-control">
+          </div>
+          <div style="color: white;">
+            <label for="name">Quarta:</label>
+            <input type="text" name="sector" id="quaIda" formControlName="quaIda" class="form-control">
+            <input type="text" name="sector" id="quaVolta" formControlName="quaVolta" class="form-control">
+          </div>
+          <div style="color: white;">
+            <label for="name">Quinta:</label>
+            <input type="text" name="sector" id="quiIda" formControlName="quiIda" class="form-control">
+            <input type="text" name="sector" id="quiVolta" formControlName="quiVolta" class="form-control">
+          </div>
+          <div style="color: white;">
+            <label for="name">Sexta:</label>
+            <input type="text" name="sector" id="sexIda" formControlName="sexIda" class="form-control">
+            <input type="text" name="sector" id="sexVolta" formControlName="sexVolta" class="form-control">
+          </div>
+        <div>
+          <label for="updateProfile"></label>
+          <input type="submit" id="updateProfile" class="btn btn-success" style="margin-top: 3%;" value="Atualizar perfil">
+        </div>
+      </form>
+      <div>
+          <button type="button" class="btn btn-success" style="margin-top: 1%;" routerLink="/perfilPublico">Voltar</button>
+      </div>
+    </div>
+  </body>

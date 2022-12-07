@@ -1,5 +1,7 @@
 # MobiSJC
 
+[![Deploy to Firebase Hosting](https://github.com/SPadrao/Mobi-SJC/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/SPadrao/Mobi-SJC/actions/workflows/firebase-hosting-merge.yml) [![Node.js CI](https://github.com/SPadrao/Mobi-SJC/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/SPadrao/Mobi-SJC/actions/workflows/node.js.yml) ![Lines](https://img.shields.io/badge/Coverage-11.9%25-red.svg?style=flat)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
 ## Development server
