@@ -10,7 +10,7 @@ import { RideService } from '../shared/ride.service';
 })
 export class HistoricoCaronasComponent implements OnInit {
 
-  rideList : Ride[] = [];
+  rideList: Ride[] = [];
   studentObj: Ride = {
     uid: '',
     id: '',
@@ -20,30 +20,30 @@ export class HistoricoCaronasComponent implements OnInit {
     embark: '',
     vacancy: 0
   };
-  uid : string = ''; 
-  id : string = '';
-  origin : string = '';
+  uid: string = '';
+  id: string = '';
+  origin: string = '';
   destiny: string = '';
   price: number = 0;
-  embark : string = '';
+  embark: string = '';
   vacancy: number = 0;
   AuthService: any;
   RideService: any;
-  
 
-  constructor(private auth: AuthService, private data : RideService) { }
+
+  constructor(private auth: AuthService, private data: RideService) { }
 
   ngOnInit(): void {
     this.getPastrides();
-    
+
   }
 
   Rides: any;
 
 
-  getPastrides(){
+  getPastrides() {
 
-    this.data.getPastrides().subscribe(res => {
+    this.data.getPastrides(this.auth.userData.uid).subscribe(res => {
 
       this.rideList = res.map((e: any) => {
         const data = e.payload.doc.data();
@@ -54,6 +54,6 @@ export class HistoricoCaronasComponent implements OnInit {
     }, err => {
       alert('Error while fetching student data');
     })
-  } 
+  }
 
 }
