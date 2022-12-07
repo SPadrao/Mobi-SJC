@@ -16,7 +16,6 @@ export class PrivateProfileComponent implements OnInit {
   public name: string = '';
   public surname: string = '';
   public phone!: string;
-  public email: string = '';
   public car: string = '';
   public carPlate: string = '';
   public showSucss: boolean = false;
@@ -33,7 +32,6 @@ export class PrivateProfileComponent implements OnInit {
       name: [this.name],
       surname: [this.surname],
       phone: [this.phone],
-      email: [this.email],
       car: [this.car],
       carPlate: [this.carPlate],
       uid: [this.uid]

@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth'
@@ -21,6 +23,7 @@ export class AuthService {
       if (user) {
         this.userData = user;
         this.userData.uid = user.uid;
+        this.getUserData();
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user')!);
       } else {
@@ -42,6 +45,13 @@ export class AuthService {
     return userRef.set(userData, {
       merge: true,
     });
+  }
+
+  // Gets user data and parse as json object to service properties
+  async getUserData() {
+    return await this.firestore.collection('users').doc(this.userData.uid).valueChanges().subscribe((_userData: any) => {
+      this.userData = _userData;
+    })
   }
 
   // login method
