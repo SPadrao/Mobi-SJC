@@ -57,8 +57,8 @@ export class RideService {
         return this.angularFirestore.collection('rides', ref => ref.where('vacancy', ">", 0)).snapshotChanges()
     }
 
-    getPastrides() {
-        return this.angularFirestore.collection("past rides/").snapshotChanges()
+    getPastrides(uid: string) {
+        return this.angularFirestore.collection('past rides/', ref => ref.where('uid', "==", uid)).snapshotChanges()
     }
 
     searchrides(searchValue: string) {
