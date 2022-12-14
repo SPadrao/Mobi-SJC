@@ -27,6 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { NotifierComponent } from './notifier/notifier.component';
 import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
 import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas.component';
+import { ForumComponent } from './forum/forum.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas
     MenuuComponent,
     NotifierComponent,
     ScheduleEditComponent,
-    HistoricoCaronasComponent
+    HistoricoCaronasComponent,
+    ForumComponent
   ],
   imports: [
     BrowserModule,
