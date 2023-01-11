@@ -1,0 +1,38 @@
+.fbText{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#first{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#sec{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#third{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.fbText{
+    font-weight: bold;
+}
+
+.welcomeText{
+    font-size: 140%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.titleComment{
+    font-size: 110%;
+}
+
+.bt{
+    text-align: end;
+} 
