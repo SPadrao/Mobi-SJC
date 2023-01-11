@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /*coloca no centro do que foi definido acima (linha)*/
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#emailRec{
+    font-size: 23px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+#inputRec{
+    width: 600px;
+}
+
+#botao_voltar{
+    margin-top: 3.5%;
+    align-items: center;
+}

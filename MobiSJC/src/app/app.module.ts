@@ -29,6 +29,7 @@ import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
 import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas.component';
 import { FeedbackListComponent } from './feedback-list/feedback-list.component'; 
 import { ChatComponent } from './chat/chat.component';
+import { EsquecerSenhaComponent } from './esquecer-senha/esquecer-senha.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ChatComponent } from './chat/chat.component';
     ScheduleEditComponent,
     HistoricoCaronasComponent,
     FeedbackListComponent,
-    ChatComponent
+    ChatComponent,
+    EsquecerSenhaComponent
   ],
   imports: [
     BrowserModule,

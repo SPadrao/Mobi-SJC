@@ -14,3 +14,24 @@
     margin-left: -67%;
     margin-top: 10px;
 }
+
+#botao_entrar{
+    margin-top: 2%;
+}
+
+#idSenha{
+    margin-top: 2%;
+}
+
+.buttonsLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /*coloca no centro do que foi definido acima (linha)*/
+    align-items: center;
+    margin-top: 2%;
+}
+
+a{
+    text-decoration: none;
+    color: aliceblue;
+}

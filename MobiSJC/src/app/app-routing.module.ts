@@ -17,6 +17,7 @@ import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
 import { HistoricoCaronasComponent } from './historico-caronas/historico-caronas.component';
 import { FeedbackListComponent } from './feedback-list/feedback-list.component';
 import { ChatComponent } from './chat/chat.component';
+import { EsquecerSenhaComponent } from './esquecer-senha/esquecer-senha.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'historico-caronas', component: HistoricoCaronasComponent, canActivate: [AuthGuardGuard] },
   { path: 'feedback-list', component: FeedbackListComponent, canActivate: [AuthGuardGuard] },
   { path: 'chat', component: ChatComponent, canActivate: [AuthGuardGuard] },
+  { path: 'esquecer-senha', component: EsquecerSenhaComponent },
   
 ];
 
