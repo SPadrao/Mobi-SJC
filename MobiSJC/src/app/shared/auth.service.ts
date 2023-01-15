@@ -11,7 +11,7 @@ import { User } from './models/user.model';
 })
 
 export class AuthService {
-  userData: any = {
+  userData: User = {
     uid: 'testingUID',
     email: 'test@test.test',
     emailVerified: true,
@@ -21,7 +21,6 @@ export class AuthService {
   constructor(private fireauth: AngularFireAuth, private firestore: AngularFirestore, private router: Router) {
     this.fireauth.authState.subscribe((user) => {
       if (user) {
-        this.userData = user;
         this.userData.uid = user.uid;
         this.getUserData();
         localStorage.setItem('user', JSON.stringify(this.userData));

@@ -18,7 +18,7 @@ export class CreateRideFormComponent implements OnInit {
   public price: number = 0;
   public embark: string = '';
   public vacancy: number = 0;
-  public showSucss: boolean = false;
+  public showSucss: Boolean = false;
   public uid: string = this.authService.userData.uid ?? '';
 
   ngOnInit(): void {
@@ -39,10 +39,8 @@ export class CreateRideFormComponent implements OnInit {
 
   ngSubmit() {
     if (this.formGroup.valid) {
-      const result = this.rideService.merge(this.formGroup.value);
-
-      if (result)
-        this.router.navigate(['/menu']);
+      this.showSucss = this.rideService.merge(this.formGroup.value);
+      this.formGroup.reset();
     }
   }
 }

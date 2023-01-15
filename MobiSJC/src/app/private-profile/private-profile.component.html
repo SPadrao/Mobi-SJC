@@ -1,7 +1,7 @@
 <div class="sucess" *ngIf="showSucss">
   <div class="col-xs-12">
     <p class="alert alert-success">
-      <strong>Perfil salvo com sucesso!</strong>
+      <strong>Perfil atualizado com sucesso!</strong>
     </p>
   </div>
 </div>
@@ -10,11 +10,6 @@
   <div id="view-private-profile" class="container">
     <h1>Edição do perfil</h1>
     <form id="private-profile-form" [formGroup]="formGroup" (ngSubmit)="ngSubmit()" ngNativeValidate>
-      <div style="color: white;">
-        <label for="picture">Foto:</label>
-        <input type="file" name="sector" id="picture" placeholder="Insira sua imagem de perfil"
-          formControlName="picture" class="form-control">
-      </div>
       <div style="color: white;">
         <label for="name">Nome*:</label>
         <input type="text" name="sector" id="name" placeholder="Insira seu nome" formControlName="name"
@@ -26,14 +21,10 @@
           class="form-control" required>
       </div>
       <div style="color: white;">
-        <label for="birthday">Telefone*:</label>
-        <input type="text" name="sector" id="phone" placeholder="Insira seu telefone" formControlName="phone"
+        <label for="phone">Telefone*:</label>
+        <input type="text" name="sector" id="phone" placeholder="Insira seu telefone com DDD" formControlName="phone"
           class="form-control" required>
       </div>
-      <!-- <div style="color: white;">
-        <label for="region">Região*:</label>
-        <input type="text" name="sector" id="region" placeholder="Insira sua região de residência" formControlName="region" class="form-control" required>
-      </div> -->
       <div style="color: white;">
         <label for="car">Carro:</label>
         <input type="text" name="sector" id="car" placeholder="Insira o modelo do carro" formControlName="car"
@@ -46,8 +37,6 @@
       </div>
       <div>
         <label for="updateProfile"></label>
-        <!-- <p class="tab">
-        </p> -->
         <input type="submit" id="updateProfile" class="btn btn-success" style="margin-top: 3%;"
           value="Atualizar perfil">
       </div>
@@ -56,8 +45,6 @@
       <p>
         <button type="button" class="btn btn-success" style="margin-top: 3%;"
           routerLink="/perfilPublico">Voltar</button>
-        <button type="button" class="btn btn-success" style="margin-top: 3%;" routerLink="/calendario-edit">Editar
-          calendário</button>
       </p>
     </div>
   </div>

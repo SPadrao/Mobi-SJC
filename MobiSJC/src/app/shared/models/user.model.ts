@@ -1,9 +1,8 @@
 
 export interface User {
     uid: string;
-    email?: string;
-    emailVerified?: boolean;
-    photoURL?: string;
+    email: string | null;
+    emailVerified: boolean;
     name?: string;
     surname?: string;
     phone?: string;

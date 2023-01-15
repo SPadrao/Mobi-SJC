@@ -14,9 +14,6 @@ export class RideService {
             ride.id = this.angularFirestore.createId()
 
         this.angularFirestore.collection('rides').doc(ride.id).set(ride, { merge: true })
-            .then(() => {
-                alert("Carona cadastrada com sucesso!");
-            })
             .catch((error) => {
                 alert("Erro ao cadastrar carona!");
                 console.log(error);

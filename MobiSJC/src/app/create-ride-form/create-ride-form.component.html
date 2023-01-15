@@ -1,7 +1,7 @@
 <div class="sucess" *ngIf="showSucss">
   <div class="col-xs-12">
     <p class="alert alert-success">
-      <strong>Registro salvo com sucesso!</strong>
+      <strong>Carona criada com sucesso!</strong>
     </p>
   </div>
 </div>
@@ -12,23 +12,28 @@
     <form id="register-form" [formGroup]="formGroup" (ngSubmit)="ngSubmit()" ngNativeValidate>
       <div style="color: white;">
         <label for="origin">Origem:</label>
-        <input type="text" name="sector" id="origin" placeholder="Digite a origem da viagem" formControlName="origin" class="form-control" required>
+        <input type="text" name="sector" id="origin" placeholder="Digite a origem da viagem" formControlName="origin"
+          class="form-control" required>
       </div>
       <div style="color: white;">
         <label for="destiny">Destino:</label>
-        <input type="text" name="sector" id="destiny" placeholder="Digite o destino da viagem" formControlName="destiny" class="form-control" required>
+        <input type="text" name="sector" id="destiny" placeholder="Digite o destino da viagem" formControlName="destiny"
+          class="form-control" required>
       </div>
       <div style="color: white;">
         <label for="price">Preço:</label>
-        <input type="number" name="sector" id="price" placeholder="Digite o valor unitário" formControlName="price" class="form-control" required min="1">
+        <input type="number" name="sector" id="price" placeholder="Digite o valor unitário" formControlName="price"
+          class="form-control" required min="1">
       </div>
       <div style="color: white;">
         <label for="embark">Partida:</label>
-        <input type="time" name="sector" id="embark" placeholder="Digite o horário de partida" formControlName="embark" class="form-control" required>
+        <input type="time" name="sector" id="embark" placeholder="Digite o horário de partida" formControlName="embark"
+          class="form-control" required>
       </div>
       <div style="color: white;">
         <label for="vacancy">Vagas:</label>
-        <input type="number" name="sector" id="vacancy" placeholder="Digite a quantidade de vagas de passageiros" formControlName="vacancy" class="form-control" required max="4" min="0">
+        <input type="number" name="sector" id="vacancy" placeholder="Digite a quantidade de vagas de passageiros"
+          formControlName="vacancy" class="form-control" required max="4" min="0">
       </div>
       <div>
         <label for="createTrip"></label>
