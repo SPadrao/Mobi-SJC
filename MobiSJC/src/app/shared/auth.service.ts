@@ -84,7 +84,7 @@ export class AuthService {
         this.router.navigate(['/cadastrar']);
       })
     }
-    alert("Utilize um email Unifesp!");
+    //alert("Utilize um email Unifesp!");
   }
 
   // sign out
