@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/mobi-sjc",
     "ignore": [
       "firebase.json",
       "**/.*",
