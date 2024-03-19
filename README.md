@@ -1,0 +1,1 @@
+A recurrent problem of Unifesp students is the lack of buses nearby. The campus is far away from the city so we came up with the idea of an exclusive app for these students, because the price of the ride is cheaper and people could meet up easier. This is our very first application made with Angular connected to Firebase.
